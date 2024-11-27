@@ -6,6 +6,8 @@ require (
 	git.code.oa.com/rainbow/golang-sdk v0.4.11
 	git.code.oa.com/rainbow/proto v1.74.0
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
+	golang.org/x/time v0.7.0
+	gopkg.in/go-playground/assert.v1 v1.2.1
 	gorm.io/driver/sqlite v1.5.5
 	gorm.io/gorm v1.25.8
 )
