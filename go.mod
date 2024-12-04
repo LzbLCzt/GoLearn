@@ -6,6 +6,7 @@ require (
 	git.code.oa.com/rainbow/golang-sdk v0.4.11
 	git.code.oa.com/rainbow/proto v1.74.0
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
+	github.com/panjf2000/ants/v2 v2.4.4
 	golang.org/x/time v0.7.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gorm.io/driver/sqlite v1.5.5
@@ -49,7 +50,6 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
-	github.com/panjf2000/ants/v2 v2.4.4 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/remeh/sizedwaitgroup v1.0.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
