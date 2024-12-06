@@ -14,6 +14,7 @@ require (
 )
 
 require (
+	filippo.io/edwards25519 v1.1.0 // indirect
 	git.code.oa.com/going/l5 v0.2.1 // indirect
 	git.code.oa.com/polaris/polaris-go v0.12.6 // indirect
 	git.code.oa.com/trpc-go/trpc-naming-polaris v0.3.4 // indirect
@@ -32,6 +33,7 @@ require (
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/go-playground/form v3.1.4+incompatible // indirect
+	github.com/go-sql-driver/mysql v1.8.1 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.3 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
