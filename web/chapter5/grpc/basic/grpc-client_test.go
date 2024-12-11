@@ -1,4 +1,4 @@
-package grpc
+package basic
 
 import (
 	pb "GoLearn/web/chapter5/proto"

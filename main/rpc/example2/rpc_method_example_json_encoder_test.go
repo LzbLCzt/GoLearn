@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-// server.go
+// server_test.go
 func TestServer(t *testing.T) {
 	_ = rpc.RegisterName("HelloService", new(HelloService))
 	listener, err := net.Listen("tcp", ":1004")
@@ -32,7 +32,7 @@ type serverResp struct {
 	Id     uint64 `json:"id"`     // 响应的 ID，与请求的 ID 匹配
 }
 
-// client.go
+// client_test.go
 func TestClient(t *testing.T) {
 	conn, err := net.Dial("tcp", ":1005")
 	if err != nil {
