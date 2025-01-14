@@ -41,4 +41,24 @@ func TestHandlerfunc3(t *testing.T) {
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatal(err)
 	}
+	tmp := TMP{Person: Person{Name: "shirdon", Age: 18}}
+	tmp.eat()
+	tmp2 := TMP2{Person: Person{Name: "shirdon", Age: 18}}
+	tmp2.eat()
+}
+
+type TMP2 TMP
+
+type TMP struct {
+	Person
+	m map[string]string
+}
+
+type Person struct {
+	Name string
+	Age  int
+}
+
+func (p *Person) eat() {
+	fmt.Println("吃饭")
 }

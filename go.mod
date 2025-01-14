@@ -6,8 +6,13 @@ require (
 	git.code.oa.com/rainbow/golang-sdk v0.4.11
 	git.code.oa.com/rainbow/proto v1.74.0
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
+	github.com/go-sql-driver/mysql v1.8.1
+	github.com/golang/protobuf v1.5.2
+	github.com/julienschmidt/httprouter v1.3.0
 	github.com/panjf2000/ants/v2 v2.4.4
 	golang.org/x/time v0.7.0
+	google.golang.org/grpc v1.46.0
+	google.golang.org/protobuf v1.28.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gorm.io/driver/sqlite v1.5.5
 	gorm.io/gorm v1.25.8
@@ -33,8 +38,6 @@ require (
 	github.com/fsnotify/fsnotify v1.4.9 // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/go-playground/form v3.1.4+incompatible // indirect
-	github.com/go-sql-driver/mysql v1.8.1 // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.3 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
 	github.com/google/uuid v1.2.0 // indirect
@@ -44,7 +47,6 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/julienschmidt/httprouter v1.3.0 // indirect
 	github.com/klauspost/compress v1.12.2 // indirect
 	github.com/lestrrat-go/strftime v1.0.3 // indirect
 	github.com/mattn/go-sqlite3 v1.14.17 // indirect
@@ -67,8 +69,6 @@ require (
 	golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 // indirect
 	golang.org/x/text v0.3.6 // indirect
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
-	google.golang.org/grpc v1.46.0 // indirect
-	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

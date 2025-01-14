@@ -3,6 +3,7 @@ package basic
 import (
 	"fmt"
 	"reflect"
+	"runtime"
 	"testing"
 )
 
@@ -27,4 +28,8 @@ type Human struct {
 
 func (h Human) Eat() {
 	fmt.Printf("%s eating", h.Name)
+}
+
+func Test2(t *testing.T) {
+	println("GOMAXPROCS=", runtime.GOMAXPROCS(0))
 }
