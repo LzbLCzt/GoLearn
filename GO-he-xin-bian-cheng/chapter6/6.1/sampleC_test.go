@@ -1,0 +1,50 @@
+package __1
+
+import (
+	"fmt"
+	"reflect"
+	"testing"
+)
+
+type User struct {
+	Id   int
+	Name string
+	Age  int
+}
+
+func (this User) String() {
+	println("User:", this.Id, this.Name, this.Age)
+}
+
+func Info(o interface{}) {
+	//获取Value信息
+	v := reflect.ValueOf(o)
+
+	//通过Vlue获取Type
+	t := v.Type()
+
+	//类型名称
+	println("Type:", t.Name())
+
+	//访问接口字段名，字段类型和字段值信息
+	println("Fields:")
+	for i := 0; i < t.NumField(); i++ {
+		field := t.Field(i)
+		value := v.Field(i).Interface() //todo Interface() returns v's current value as an interface{}
+
+		//类型查询
+		switch value := value.(type) {
+		case int:
+			fmt.Printf(" %6s: %v = %d\n", field.Name, field.Type, value)
+		case string:
+			fmt.Printf(" %6s: %v = %s\n", field.Name, field.Type, value)
+		default:
+			fmt.Printf(" %6s: %v = %s\n", field.Name, field.Type, value)
+
+		}
+	}
+}
+func TestSampleC(t *testing.T) {
+	u := User{1, "Tom", 30}
+	Info(u)
+}
