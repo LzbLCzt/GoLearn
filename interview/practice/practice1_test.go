@@ -3,6 +3,7 @@ package practice
 import (
 	"fmt"
 	"sync"
+	"sync/atomic"
 	"testing"
 	"time"
 )
@@ -78,8 +79,7 @@ func TestPractice3(t *testing.T) {
 
 // -----------------------------------------------------------
 // todo 实现一个类似sync.Once的单例
-// todo 问题：f函数可能执行多次，因为done 字段的检查和设置不是原子操作，在多线程环境下存在竞态条件
-// todo 解决：使用原子操作，将done类型改为atomic.Uint32
+// todo 问题：f函数可能执行多次，因为goroutine1更新done = 1后，goroutine2缓存的可能是旧值（done=0），因此goroutine获取lock之后判断o.done==0通过，会再次执行f函数。
 type Once struct {
 	m    sync.Mutex
 	done uint32
@@ -100,12 +100,43 @@ func (o *Once) Do(f func()) {
 
 func TestPractice4(t *testing.T) {
 	o := Once{m: sync.Mutex{}, done: 0}
-	go o.Do(func() {
-		fmt.Println("once")
-	})
-	go o.Do(func() {
-		fmt.Println("once")
-	})
+	for i := 0; i < 10000; i++ {
+		go o.Do(func() {
+			fmt.Println("once")
+		})
+	}
+	time.Sleep(5 * time.Second)
+}
+
+// todo 修复 once.Do() 的问题
+type Once2 struct {
+	m    sync.Mutex
+	done uint32
+}
+
+func (o *Once2) Do(f func()) {
+	// 使用 atomic.LoadUint32 保证并发安全地读取 done 的值
+	if atomic.LoadUint32(&o.done) == 1 {
+		return
+	}
+	o.m.Lock()
+	defer o.m.Unlock()
+
+	// 在获取锁后再次检查 done，防止多个 goroutine 进入临界区
+	if o.done == 0 {
+		defer atomic.StoreUint32(&o.done, 1) // 原子更新 done 标志
+		f()
+	}
+}
+
+func TestPractice4_repair(t *testing.T) {
+	o := Once2{}
+	for i := 0; i < 10000; i++ {
+		go o.Do(func() {
+			fmt.Println("once")
+		})
+	}
+	time.Sleep(5 * time.Second)
 }
 
 // -----------------------------------------------------------
