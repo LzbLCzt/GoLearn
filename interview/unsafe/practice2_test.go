@@ -55,8 +55,37 @@ func Test2Practice5(t *testing.T) {
 	指向底层数组的指针（8 字节）
 	长度（len）（8 字节）
 	容量（cap）（8 字节）
+	type slice struct {
+	    array unsafe.Pointer // 底层数组的指针
+	    len   int            // 当前切片的长度
+	    cap   int            // 当前切片的容量
+	}
 	但 unsafe.Sizeof(slice) 只计算 slice 结构体的大小，不包括底层数组
 	*/
+}
+
+func Test2Practice5_1(t *testing.T) {
+	s := []int{1,2,3,4,5}
+	ptr := unsafe.Pointer(&s)
+	sliceHeader := (*struct {
+		Data uintptr
+		Len int
+		Cap int
+	})(ptr)
+	/*
+	Data: 底层数组的起始地址（十六进制表示）。
+	Len: 切片的长度，即 len(s) == 5。
+	Cap: 切片的容量，即 cap(s) == 5。
+	 */
+	fmt.Printf("Data: %x, Len: %d, Cap: %d\n", sliceHeader.Data, sliceHeader.Len, sliceHeader.Cap)
+}
+
+//todo 通过array指针创建slice
+func Test2Practice5_2(t *testing.T) {
+	arr := [5]int{1,2,3,4,5}
+	ptr := unsafe.Pointer(&arr[0])
+	slice := unsafe.Slice((*int)(ptr), 3)
+	fmt.Println(slice)
 }
 
 func Test2Practice6(t *testing.T) {
@@ -71,5 +100,19 @@ func Test2Practice6(t *testing.T) {
 	所以，在 64 位系统 上，string 结构体占 8 + 8 = 16 字节
 	unsafe.Sizeof(str) 只计算 string 结构体本身的大小，不包括字符串内容的大小
 	 */
+}
+
+func Test2Practice6_1(t *testing.T) {
+	str := "Hello, Go"
+	ptr := unsafe.Pointer(&str)
+	strHeader := (*struct {
+		Data uintptr
+		Len int
+	})(ptr)
+	/*
+	Data：底层字符串的起始内存地址（十六进制表示）。
+	Len：字符串的长度，即 len(str) == 10。
+	 */
+	fmt.Printf("Data: %x, Len: %d\n", strHeader.Data, strHeader.Len)
 }
 // -----------------------------------------------
