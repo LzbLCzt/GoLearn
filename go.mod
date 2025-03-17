@@ -6,10 +6,12 @@ require (
 	git.code.oa.com/rainbow/golang-sdk v0.4.11
 	git.code.oa.com/rainbow/proto v1.74.0
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
+	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/golang/protobuf v1.5.2
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/panjf2000/ants/v2 v2.4.4
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/time v0.7.0
 	google.golang.org/grpc v1.46.0
 	google.golang.org/protobuf v1.28.0
