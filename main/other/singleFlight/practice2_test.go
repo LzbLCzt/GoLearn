@@ -43,7 +43,7 @@ func NewCache() *Cache {
 	}
 }
 
-// 获取数据（缓存未命中时合并请求）
+// 1. 获取数据（缓存未命中时合并请求）
 func (c *Cache) Get(key string) (string, error) {
 	//c.mu.Lock()
 	//if val, ok := c.data[key]; ok {
