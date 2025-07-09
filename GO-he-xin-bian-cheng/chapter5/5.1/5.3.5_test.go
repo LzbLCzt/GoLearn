@@ -13,7 +13,8 @@ func Test_5_3_5_A(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	go work(ctx, "work1")
 
-	ctxWithDeadline, _ := context.WithDeadline(ctx, time.Now().Add(3*time.Second)) //todo 3s后自动退出
+	tt := time.Now().Add(3 * time.Second)
+	ctxWithDeadline, _ := context.WithDeadline(ctx, tt) //todo 3s后自动退出
 	go work(ctxWithDeadline, "work2")
 
 	oc := otherContext{ctx}
