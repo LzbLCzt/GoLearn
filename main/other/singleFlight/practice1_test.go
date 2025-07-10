@@ -17,7 +17,7 @@ func TestPractice1(t *testing.T) {
 	var wg sync.WaitGroup
 	var executed int32 // 原子计数器标记实际执行次数
 
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 10000; i++ {
 		wg.Add(1)
 		go func(id int) {
 			defer wg.Done()
