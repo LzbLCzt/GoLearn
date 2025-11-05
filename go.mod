@@ -11,6 +11,7 @@ require (
 	github.com/golang/protobuf v1.5.2
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/panjf2000/ants/v2 v2.4.4
+	github.com/spf13/cobra v1.10.1
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	golang.org/x/time v0.7.0
 	google.golang.org/grpc v1.46.0
@@ -45,6 +46,7 @@ require (
 	github.com/google/uuid v1.2.0 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jinzhu/copier v0.3.5 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
@@ -61,6 +63,7 @@ require (
 	github.com/remeh/sizedwaitgroup v1.0.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/spf13/cast v1.3.1 // indirect
+	github.com/spf13/pflag v1.0.9 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.28.0 // indirect
 	go.uber.org/atomic v1.7.0 // indirect

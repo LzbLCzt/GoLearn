@@ -11,7 +11,7 @@ import (
 
 type Person struct {
 	name string
-	age int
+	age  int
 }
 
 func TestPrac(t *testing.T) {
@@ -43,9 +43,9 @@ func TestPrac2(t *testing.T) {
 func worker(ctx context.Context, i int) error {
 	fmt.Printf("worker %d, start\n", i)
 	select {
-	case <- time.After(time.Duration(i) * time.Second):
+	case <-time.After(time.Duration(i) * time.Second):
 		fmt.Printf("worker %d finished \n", i)
-	case <- ctx.Done():
+	case <-ctx.Done():
 		fmt.Printf("worker %d cancelled\n", i)
 		return ctx.Err()
 	}
@@ -53,4 +53,16 @@ func worker(ctx context.Context, i int) error {
 		return fmt.Errorf("err occur")
 	}
 	return nil
+}
+
+func TestPrac3(t *testing.T) {
+	test()
+}
+
+func test() string {
+	defer func() {
+		fmt.Println("defering")
+	}()
+
+	return "test"
 }
