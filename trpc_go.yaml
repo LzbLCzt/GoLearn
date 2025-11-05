@@ -1,0 +1,9 @@
+# trpc_go.yaml
+server:
+  service:
+    - name: helloworld.Greeter
+      ip: 127.0.0.1
+      port: 8000
+      network: tcp
+      protocol: trpc
+      timeout: 1000

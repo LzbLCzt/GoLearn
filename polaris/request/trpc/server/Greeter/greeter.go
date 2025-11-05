@@ -1,16 +1,17 @@
 package Greeter
 
 import (
+	greeter "GoLearn/polaris/request/trpc/api/Greeter"
 	"context"
 	"fmt"
-	"github.com/LzbLCzt/GoLearn/polaris/request/trpc/Greeter/helloworld.pb"
 )
 
 // 服务实现
-type greeterServer struct {
+type GreeterServer struct {
 }
 
-func (s *greeterServer) SayHello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {
-    message := fmt.Sprintf("Hello, %s! Welcome to tRPC!", req.Name)
-    return &pb.HelloReply{Message: message}, nil
-})
+func (s *GreeterServer) SayHello(ctx context.Context, req *greeter.HelloRequest) (*greeter.HelloReply, error) {
+	message := fmt.Sprintf("Hello, %s! Welcome to tRPC!", req.Name)
+	fmt.Println(message)
+	return &greeter.HelloReply{Message: message}, nil
+}
