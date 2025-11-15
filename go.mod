@@ -7,8 +7,10 @@ require (
 	git.code.oa.com/rainbow/golang-sdk v0.5.5
 	git.code.oa.com/rainbow/proto v1.94.0
 	git.code.oa.com/trpc-go/trpc-go v0.15.1
+	git.woa.com/polaris/polaris-server-api/api/v1/model v1.1.4
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
 	github.com/go-sql-driver/mysql v1.9.3
+	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/protobuf v1.5.2
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/panjf2000/ants/v2 v2.4.6
@@ -27,7 +29,6 @@ require (
 	git.woa.com/polaris/polaris-server-api/api/metric v1.0.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/monitor v1.0.7 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.2 // indirect
-	git.woa.com/polaris/polaris-server-api/api/v1/model v1.1.4 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v2/grpc v1.0.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v2/model v1.0.3 // indirect
 	git.woa.com/trpc-go/go_reuseport v1.7.0 // indirect

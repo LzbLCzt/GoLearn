@@ -1,6 +1,7 @@
 package test
 
 import (
+	"GoLearn/internal/http"
 	"bytes"
 	"flag"
 	apiV1Model "git.woa.com/polaris/polaris-server-api/api/v1/model"
@@ -11,6 +12,8 @@ import (
 	"testing"
 )
 
+var serverProxyClient *http.Client
+
 func TestProtoToJson(t *testing.T) {
 	defer glog.Flush()
 
@@ -19,7 +22,11 @@ func TestProtoToJson(t *testing.T) {
 	flag.Set("stderrthreshold", "INFO")
 	flag.Parse()
 
-	instances := CreateInstance()
+	serverProxyClient = http.NewClient("30.163.76.56:8080", "v1")
+	serverProxyClient.PlatformId = "polaris-sdk-test"
+	serverProxyClient.PlatformToken = "a63acf6a46fd44f1ad892f80a2332c13"
+
+	instances := GetInstances()
 	glog.Infof("instances: %v", instances)
 
 	// 将[]*apiV1Model.Instance转换为[]proto.Message
@@ -28,34 +35,27 @@ func TestProtoToJson(t *testing.T) {
 		protoMessages = append(protoMessages, instance)
 	}
 
-	buffer, err := JSONFromProtoMessages(protoMessages)
+	err := serverProxyClient.CreateInstances(protoMessages)
 	if err != nil {
-		glog.Errorf("JSONFromProtoMessages error: %v", err)
+		glog.Errorf("CreateInstances error: %v", err)
 		return
 	}
-	glog.Infof("buffer: %s", buffer.String())
 }
 
-func CreateInstance() []*apiV1Model.Instance {
+func GetInstances() []*apiV1Model.Instance {
 	var instances []*apiV1Model.Instance
-	instances = append(instances, &apiV1Model.Instance{
-		Service:   &wrappers.StringValue{Value: "polaris.test.grpc"},
-		Namespace: &wrappers.StringValue{Value: "Test"},
-		Host:      &wrappers.StringValue{Value: "127.0.0.1"},
-		Port:      &wrappers.UInt32Value{Value: 8080},
-		Protocol:  &wrappers.StringValue{Value: "grpc"},
-	})
 
 	instances = append(instances, &apiV1Model.Instance{
-		Service:   &wrappers.StringValue{Value: "polaris.test.grpc"},
-		Namespace: &wrappers.StringValue{Value: "Test2"},
-		Host:      &wrappers.StringValue{Value: "127.0.0.2"},
+		Service:   &wrappers.StringValue{Value: "lzb_test"},
+		Namespace: &wrappers.StringValue{Value: "Test"},
+		Host:      &wrappers.StringValue{Value: "127.0.0.3"},
 		Port:      &wrappers.UInt32Value{Value: 8080},
 		Protocol:  &wrappers.StringValue{Value: "grpc"},
 		Metadata: map[string]string{
 			"key1": "value1",
 			"key2": "value2",
 		},
+		ServiceToken: &wrappers.StringValue{Value: "@aa2c35e975"},
 	})
 	return instances
 }
