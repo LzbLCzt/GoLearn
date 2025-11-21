@@ -2,23 +2,18 @@ package basic
 
 import (
 	"fmt"
-	"reflect"
-	"runtime"
 	"testing"
 )
 
 func TestBasic(t *testing.T) {
-	var p Person
-	h := Human{Name: "shennong"}
-	p = h
-	fmt.Printf("type of p: %T \n", p)
+	h := &Human{Name: "zhang"}
+	Call(h)
 
-	tt := reflect.TypeOf(p)
-	fmt.Printf("type of p: %v \n", tt)
-
+	d := &Dog{Name: "wang"}
+	Call(d)
 }
 
-type Person interface {
+type Animal interface {
 	Eat()
 }
 
@@ -26,10 +21,18 @@ type Human struct {
 	Name string
 }
 
-func (h Human) Eat() {
+type Dog struct {
+	Name string
+}
+
+func (h *Human) Eat() {
 	fmt.Printf("%s eating", h.Name)
 }
 
-func Test2(t *testing.T) {
-	println("GOMAXPROCS=", runtime.GOMAXPROCS(0))
+func (h *Dog) Eat() {
+	fmt.Printf("%s eating", h.Name)
+}
+
+func Call(p Animal) {
+	p.Eat()
 }

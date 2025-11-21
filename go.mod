@@ -7,6 +7,7 @@ require (
 	git.code.oa.com/rainbow/golang-sdk v0.5.5
 	git.code.oa.com/rainbow/proto v1.94.0
 	git.code.oa.com/trpc-go/trpc-go v0.15.1
+	git.woa.com/polaris/polaris-server-api v1.0.19
 	git.woa.com/polaris/polaris-server-api/api/v1/model v1.1.4
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
 	github.com/go-sql-driver/mysql v1.9.3
