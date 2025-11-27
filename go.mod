@@ -10,9 +10,12 @@ require (
 	git.woa.com/polaris/polaris-server-api v1.0.19
 	git.woa.com/polaris/polaris-server-api/api/v1/model v1.1.4
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
+	github.com/emicklei/go-restful v2.16.0+incompatible
 	github.com/go-sql-driver/mysql v1.9.3
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/protobuf v1.5.2
+	github.com/google/uuid v1.2.0
+	github.com/gorilla/mux v1.8.1
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/panjf2000/ants/v2 v2.4.6
 	golang.org/x/sync v0.9.0
@@ -41,7 +44,6 @@ require (
 	github.com/go-playground/form/v4 v4.2.0 // indirect
 	github.com/golang/snappy v0.0.3 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
-	github.com/google/uuid v1.2.0 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/jinzhu/copier v0.3.5 // indirect

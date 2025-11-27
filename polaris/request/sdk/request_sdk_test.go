@@ -17,8 +17,8 @@ func TestSdkRequest_GetOneInstanceV2(t *testing.T) {
 		return
 	}
 	req := api.GetAllInstancesRequest{}
-	req.Service = "shennong-backend-risk.test"
-	req.Namespace = "Test"
+	req.Service = "polaris.redis.discover"
+	req.Namespace = "Polaris"
 	rsp, err := consumer.GetAllInstances(&req)
 	if err != nil {
 		t.Errorf("fail to get instance, err is %v", err)
