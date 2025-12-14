@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-var consumer api.ConsumerAPI
+var Consumer api.ConsumerAPI
 
 // 通过配置文件启动polaris sdk(配置文件用的是开发环境的配置)
 func TestSdkRequest_GetOneInstanceV2(t *testing.T) {
@@ -19,7 +19,7 @@ func TestSdkRequest_GetOneInstanceV2(t *testing.T) {
 	req := api.GetAllInstancesRequest{}
 	req.Service = "polaris.redis.discover"
 	req.Namespace = "Polaris"
-	rsp, err := consumer.GetAllInstances(&req)
+	rsp, err := Consumer.GetAllInstances(&req)
 	if err != nil {
 		t.Errorf("fail to get instance, err is %v", err)
 		return
@@ -39,7 +39,7 @@ func TestSdkRequest_GetOneInstance(t *testing.T) {
 	req := api.GetOneInstanceRequest{}
 	req.Namespace = "Test"
 	req.Service = "shennong-backend-risk.test"
-	rsp, err := consumer.GetOneInstance(&req)
+	rsp, err := Consumer.GetOneInstance(&req)
 	if err != nil {
 		t.Errorf("fail to get instance, err is %v", err)
 		return
@@ -56,11 +56,11 @@ func TestSdkRequest_GetOneInstance(t *testing.T) {
 }
 
 func InitPolarisByYaml(path string) error {
-	if consumer != nil {
+	if Consumer != nil {
 		return nil
 	}
 	var err error
-	consumer, err = api.NewConsumerAPIByFile(path)
+	Consumer, err = api.NewConsumerAPIByFile(path)
 	if err != nil {
 		log.Errorf("fail to create ConsumerAPI by default configuration, err is %v", err)
 		return err
@@ -69,7 +69,7 @@ func InitPolarisByYaml(path string) error {
 }
 
 func InitPolaris(address string) error {
-	if consumer != nil {
+	if Consumer != nil {
 		return nil
 	}
 
@@ -79,7 +79,7 @@ func InitPolaris(address string) error {
 	}
 
 	var err error
-	consumer, err = api.NewConsumerAPIByConfig(cfg)
+	Consumer, err = api.NewConsumerAPIByConfig(cfg)
 	if err != nil {
 		log.Errorf("fail to create ConsumerAPI by default configuration, err is %v", err)
 		return err

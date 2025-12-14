@@ -9,6 +9,7 @@ require (
 	git.code.oa.com/trpc-go/trpc-go v0.15.1
 	git.woa.com/polaris/polaris-server-api v1.0.19
 	git.woa.com/polaris/polaris-server-api/api/v1/model v1.1.4
+	git.woa.com/polaris/polaris-server-api/api/v1/trpc v1.0.1
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
 	github.com/emicklei/go-restful v2.16.0+incompatible
 	github.com/go-sql-driver/mysql v1.9.3
@@ -18,6 +19,7 @@ require (
 	github.com/gorilla/mux v1.8.1
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/panjf2000/ants/v2 v2.4.6
+	github.com/pkg/errors v0.9.1
 	golang.org/x/sync v0.9.0
 	golang.org/x/time v0.14.0
 	google.golang.org/grpc v1.46.0
@@ -58,7 +60,6 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/remeh/sizedwaitgroup v1.0.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/spf13/cast v1.3.1 // indirect
