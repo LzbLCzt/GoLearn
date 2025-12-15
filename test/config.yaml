@@ -1,0 +1,7 @@
+name: "zhengbangli"
+
+clusterInfo:
+  cluster.main:
+    name: "main"
+  cluster.teg:
+    name: "teg"

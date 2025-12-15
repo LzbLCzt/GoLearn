@@ -3,10 +3,15 @@ package test
 import (
 	"context"
 	"fmt"
-	"golang.org/x/sync/errgroup"
+	"os"
+	"reflect"
+	"sync"
 	"testing"
 	"time"
 	"unsafe"
+
+	"golang.org/x/sync/errgroup"
+	"gopkg.in/yaml.v2"
 )
 
 type Person struct {
@@ -55,14 +60,118 @@ func worker(ctx context.Context, i int) error {
 	return nil
 }
 
-func TestPrac3(t *testing.T) {
-	test()
-}
-
 func test() string {
 	defer func() {
 		fmt.Println("defering")
 	}()
 
 	return "test"
+}
+func TestPrac3(t *testing.T) {
+	test()
+}
+
+type A struct {
+	Name *string
+	Age  int
+}
+
+var DefaultA = A{}
+
+func TestPrac4(t *testing.T) {
+	fmt.Printf("DefaultA: %v\n", DefaultA)
+	DefaultACopy := DefaultA
+	n := "test"
+	DefaultA.Name = &n
+	fmt.Printf("DefaultA: %v\n", *DefaultA.Name)
+	fmt.Printf("DefaultACopy: %v\n", DefaultACopy)
+}
+
+type Cluster struct {
+	Name string `yaml:"name"`
+}
+
+type Config struct {
+	Name        string             `yaml:"name"`
+	ClusterInfo map[string]Cluster `yaml:"clusterInfo"`
+}
+
+var DefaultConfig = &Config{}
+
+func TestPrac5(t *testing.T) {
+	clusterInfo := DefaultConfig.ClusterInfo
+	err := LoadConfigFromYAML("./config.yaml", DefaultConfig)
+	if err != nil {
+		fmt.Println("err: ", err)
+		return
+	}
+	fmt.Printf("DefaultConfig: %v\n", *DefaultConfig)
+	fmt.Printf("clusterInfo from source: %v\n", DefaultConfig.ClusterInfo)
+	fmt.Printf("cfg: %v\n", clusterInfo)
+}
+
+func LoadConfigFromYAML(yamlFile string, config interface{}) error {
+	if yamlFile == "" {
+		return fmt.Errorf("empty file name")
+	}
+
+	fmt.Printf("[INFO] load config from yaml file %s\n", yamlFile)
+
+	file, err := os.Open(yamlFile)
+	if err != nil {
+		return fmt.Errorf("[ERROR] open yaml file fail: %v\n", err)
+	}
+	defer file.Close()
+
+	return yaml.NewDecoder(file).Decode(config)
+}
+
+type KVcache struct {
+	Name  string
+	Cache *sync.Map
+}
+
+type Data struct {
+	ID   int
+	Data string
+}
+
+func TestPrac6(t *testing.T) {
+	cache := &KVcache{
+		Name:  "abc",
+		Cache: &sync.Map{},
+	}
+
+	data := &Data{
+		ID:   1,
+		Data: "aaa",
+	}
+
+	cache.Cache.Store("abc", data)
+
+	value, ok := cache.Cache.Load("abc")
+	if ok {
+		if x, y := value.(*Data); y {
+			copyData := *x
+			copyData.ID = 2323
+
+			// 查看copyData的类型
+			fmt.Printf("copyData: %v\n", reflect.TypeOf(copyData))
+			fmt.Printf("value: %v\n", reflect.TypeOf(value))
+		}
+	}
+}
+
+func TestPrac7(t *testing.T) {
+	m := map[string]string{
+		"k": "v",
+	}
+
+	fmt.Printf("m: %v\n", m)
+
+	f := func (source map[string]string) {
+		source["k1"] = "v1"
+	}
+	f(m)
+	fmt.Printf("m: %v\n", m)
 }
