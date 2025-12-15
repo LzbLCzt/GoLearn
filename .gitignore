@@ -1,3 +1,8 @@
 .idea/*
 polaris/log/*
 polaris/log/*/*
+
+polaris/discover.proxy/polaris/log/*
+polaris/request/sdk/polaris/log/*
+polaris/request/sdk/polaris/log/network/*
+polaris/request/sdk/polaris/log/network/*

@@ -3,13 +3,14 @@ package discover_proxy
 import (
 	"context"
 	"fmt"
-	"git.code.oa.com/polaris/polaris-go/api"
+	"time"
+
 	"git.code.oa.com/trpc-go/trpc-go/client"
+	"git.woa.com/polaris/polaris-go/v2/api"
 	apiV1Model "git.woa.com/polaris/polaris-server-api/api/v1/model"
 	"git.woa.com/polaris/polaris-server-api/api/v1/trpc"
 	"github.com/golang/protobuf/ptypes/wrappers"
 	"github.com/pkg/errors"
-	"time"
 )
 
 func init() {
@@ -24,7 +25,7 @@ var DefaultBackend = &backend{
 }
 
 type backend struct {
-	polarisTRPCClientProxy trpc.PolarisTRPCClientProxy
+	polarisTRPCClientProxy IDiscover
 	consumer               api.ConsumerAPI
 }
 
@@ -33,7 +34,8 @@ func (b *backend) discover(ctx context.Context, backendService, serviceName, nam
 
 	req := api.GetOneInstanceRequest{}
 	req.Namespace = "Polaris"
-	req.Service = backendService
+	//req.Service = backendService
+	req.Service = "polaris.discover"
 	rsp, err := b.consumer.GetOneInstance(&req)
 	if err != nil {
 		return nil, errors.Wrapf(err, "failed to get instance for service %s", backendService)
@@ -44,6 +46,8 @@ func (b *backend) discover(ctx context.Context, backendService, serviceName, nam
 	}
 
 	instance := rsp.Instances[0]
+
+	fmt.Printf("instances: +%v\n", rsp.Instances)
 
 	discoverReq := &apiV1Model.DiscoverRequest{
 		Type: reqTyp,
@@ -58,6 +62,7 @@ func (b *backend) discover(ctx context.Context, backendService, serviceName, nam
 	defer cancel()
 
 	target := fmt.Sprintf("ip://%s", address)
+	fmt.Printf("target: %s\n", target)
 	trpcClient := client.WithTarget(target)
 
 	discoverRsp, err := b.polarisTRPCClientProxy.Discover(dialCtx, discoverReq, trpcClient)
