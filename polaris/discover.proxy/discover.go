@@ -41,6 +41,10 @@ type backend struct {
 	gClient                *GRPCClient
 }
 
+func (b *backend) getInstance(req *api.GetInstancesRequest) (*model.InstancesResponse, error) {
+	return b.consumer.GetInstances(req)
+}
+
 func (b *backend) getOneInstance(req *api.GetOneInstanceRequest) (*model.InstancesResponse, error) {
 	return b.consumer.GetOneInstance(req)
 }

@@ -105,7 +105,7 @@ func TestPractice4(t *testing.T) {
 			fmt.Println("once")
 		})
 	}
-	time.Sleep(5 * time.Second)
+	time.Sleep(3 * time.Second)
 }
 
 // todo 修复 once.Do() 的问题
