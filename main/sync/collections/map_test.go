@@ -116,3 +116,29 @@ func Test_Collections5(t *testing.T) {
 		<-ch
 	}
 }
+
+type CM struct {
+	m sync.Map
+}
+
+func Test_Collections56(t *testing.T) {
+	cm := &CM{}
+	fmt.Printf("cm: %+v\n", cm)
+
+	cm.m.Range(func(key, value interface{}) bool {
+		return true
+	})
+
+	if c, ok := cm.m.Load("a"); !ok {
+		fmt.Println("not ok")
+		fmt.Println(c)
+	}
+
+	//cm.m.Store("a", "b")
+	//value, ok := cm.m.Load("a")
+	//if !ok {
+	//	t.Fatalf("err")
+	//}
+	//v := value.(string)
+	//fmt.Println(v)
+}

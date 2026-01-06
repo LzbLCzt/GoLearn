@@ -1,0 +1,6 @@
+{"level":"debug","ts":"2025-12-25T11:17:04.346+0800","caller":"zap/zap_test.go:60","msg":"这是一条Debug级别的日志count42"}
+{"level":"info","ts":"2025-12-25T11:17:04.346+0800","caller":"zap/zap_test.go:61","msg":"服务启动成功port8080"}
+{"level":"warn","ts":"2025-12-25T11:17:04.346+0800","caller":"zap/zap_test.go:62","msg":"数据库连接较慢duration150"}
+{"level":"error","ts":"2025-12-25T11:17:04.346+0800","caller":"zap/zap_test.go:63","msg":"文件读取失败fileconfig.yamlerror文件不存在"}
+{"level":"info","ts":"2025-12-25T11:17:04.346+0800","caller":"zap/zap_test.go:66","msg":"用户 张三 登录成功，ID: 1001"}
+{"level":"info","ts":"2025-12-25T11:17:04.346+0800","caller":"zap/zap_test.go:69","msg":"请求处理完成","method":"GET","path":"/api/users","status":200,"duration":45}

@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"testing"
+	"time"
 
 	"git.woa.com/polaris/polaris-go/v2/api"
 	apiV1Model "git.woa.com/polaris/polaris-server-api/api/v1/model"
@@ -39,15 +40,22 @@ func TestGetInstance(t *testing.T) {
 	req.Namespace = "Polaris"
 	req.Service = "polaris.report"
 
-	resp, err := DefaultBackend.getInstance(req)
-	if err != nil {
-		t.Fatalf("err: %v", err)
+	for {
+		resp, err := DefaultBackend.getInstance(req)
+		if err != nil {
+			t.Fatalf("err: %v", err)
+		}
+
+		instances := resp.Instances
+		fmt.Printf("len of ins: %d\n", len(instances))
+		//for _, ins := range instances {
+		//	fmt.Printf("ins: %v", ins.GetCircuitBreakerStatus())
+		//}
+		time.Sleep(1 * time.Second)
 	}
 
-	instances := resp.Instances
-	fmt.Printf("len of ins: %d\n", len(instances))
-	for _, ins := range instances {
-		fmt.Printf("ins: %v", ins.GetCircuitBreakerStatus())
-	}
+}
+
+func TestGrpcDial(t *testing.T) {
 
 }

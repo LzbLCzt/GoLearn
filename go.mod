@@ -9,6 +9,7 @@ require (
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
 	git.woa.com/polaris/polaris-go/v2 v2.6.10
 	git.woa.com/polaris/polaris-server-api v1.0.19
+	git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.2
 	git.woa.com/polaris/polaris-server-api/api/v1/model v1.3.0
 	git.woa.com/polaris/polaris-server-api/api/v1/trpc v1.0.1
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
@@ -21,12 +22,15 @@ require (
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/panjf2000/ants/v2 v2.4.6
 	github.com/pkg/errors v0.9.1
-	github.com/stretchr/testify v1.8.0
-	golang.org/x/sync v0.9.0
+	github.com/stretchr/testify v1.9.0
+	go.uber.org/mock v0.6.0
+	go.uber.org/zap v1.21.0
+	golang.org/x/sync v0.16.0
 	golang.org/x/time v0.14.0
 	google.golang.org/grpc v1.46.0
 	google.golang.org/protobuf v1.28.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
+	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gopkg.in/yaml.v2 v2.4.0
 	gorm.io/driver/sqlite v1.6.0
 	gorm.io/gorm v1.31.1
@@ -37,7 +41,6 @@ require (
 	git.woa.com/jce/jce v1.2.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/metric v1.0.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/monitor v1.0.8 // indirect
-	git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.2 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v2/grpc v1.0.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v2/model v1.0.3 // indirect
 	git.woa.com/trpc-go/go_reuseport v1.7.0 // indirect
@@ -73,7 +76,6 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/automaxprocs v1.3.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
-	go.uber.org/zap v1.21.0 // indirect
 	golang.org/x/net v0.5.0 // indirect
 	golang.org/x/sys v0.4.0 // indirect
 	golang.org/x/text v0.20.0 // indirect
