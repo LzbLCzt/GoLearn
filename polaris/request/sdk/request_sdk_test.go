@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"git.code.oa.com/polaris/polaris-go/api"
+	"git.code.oa.com/polaris/polaris-go/pkg/config"
 	"git.code.oa.com/trpc-go/trpc-go/log"
 )
 
@@ -17,11 +18,12 @@ func TestSdkRequest_GetOneInstanceV2(t *testing.T) {
 		t.Errorf("fail to init polaris, err is %v", err)
 		return
 	}
-	req := api.GetInstancesRequest{}
+	req := api.GetOneInstanceRequest{}
 	req.Service = "lzb_test"
 	req.Namespace = "Test"
-	//rsp, err := Consumer.GetAllInstances(&req)
-	rsp, err := Consumer.GetInstances(&req)
+	req.LbPolicy = config.DefaultLoadBalancerMaglev
+	rsp, err := Consumer.GetOneInstance(&req)
+	//rsp, err := Consumer.GetInstances(&req)
 	if err != nil {
 		t.Errorf("fail to get instance, err is %v", err)
 		return
