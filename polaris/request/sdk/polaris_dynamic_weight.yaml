@@ -1,0 +1,22 @@
+global:
+  system:
+    discoverCluster:
+      service: polaris.discover # discover-proxy服务
+      #可选：服务刷新间隔
+      refreshInterval: 1s
+  api:
+    # 默认api超时时间
+    timeout: 10000ms
+  serverConnector:
+    addresses:
+      - 9.141.64.64:8081
+    protocol: grpc
+    # 服务的定时同步周期
+    #syncInterval: 1s
+    # 服务的定时同步周期
+    serverSwitchInterval: 2m
+  dynamic_weight:
+    isOpenDynamicWeight: true  # 此配置项会启动一个动态权重线程，用于上报和查询动态权重数据
+  consumer:
+    loadBalancer:
+      type: dynamicWeight
