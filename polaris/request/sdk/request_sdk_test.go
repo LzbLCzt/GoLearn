@@ -88,8 +88,8 @@ func TestSdkRequest_GetInstancesV2(t *testing.T) {
 		return
 	}
 	req := api.GetInstancesRequest{}
-	req.Service = "polaris.report"
-	req.Namespace = "Test"
+	req.Service = "polaris.report.test"
+	req.Namespace = "Polaris"
 	rsp, err := Consumer.GetInstances(&req)
 	if err != nil {
 		t.Errorf("fail to get instance, err is %v", err)

@@ -65521,3 +65521,1060 @@ provider:
 2026-02-03 18:35:44.324529Z	info	base	network/conn.go:116	release connection: {ID:2334063938,Address:30.163.16.111:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris.discover"}, ClusterType: discover}}
 2026-02-03 18:35:44.502281Z	info	base	network/conn.go:116	release connection: {ID:1801599199,Address:30.160.241.181:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris.dynamic.weight"}, ClusterType: dynamicWeight}}
 2026-02-03 18:35:44.518864Z	info	base	network/conn.go:116	release connection: {ID:1291460505,Address:30.160.241.181:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris.dynamic.weight"}, ClusterType: dynamicWeight}}
+2026-02-06 11:06:48.469362Z	warn	base	config/default.go:401	no IP or interface name configured
+2026-02-06 11:06:48.469906Z	info	base	api/config.go:293	global clock started
+2026-02-06 11:06:48.469944Z	warn	base	config/default.go:401	no IP or interface name configured
+2026-02-06 11:06:48.469967Z	info	base	api/config.go:321	
+-------Start to init SDKContext of version 0.12.12, IP: , PID: 15626, UID: FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, CONTAINER: , HOSTNAME:-------
+2026-02-06 11:06:48.470055Z	info	base	grpc/operation_async.go:88	set grpc plugin as connectionCreator
+2026-02-06 11:06:48.470122Z	info	base	plugin/manage.go:236	Initialized plugin type serverConnector, name grpc, id 30
+2026-02-06 11:06:48.470270Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name nearbyBasedRouter, id 15
+2026-02-06 11:06:48.470391Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name ruleBasedRouter, id 16
+2026-02-06 11:06:48.470396Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name setDivisionRouter, id 17
+2026-02-06 11:06:48.470400Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name canaryRouter, id 12
+2026-02-06 11:06:48.470403Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name dstMetaRouter, id 13
+2026-02-06 11:06:48.470406Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name filterOnlyRouter, id 14
+2026-02-06 11:06:48.470410Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name hash, id 2
+2026-02-06 11:06:48.470413Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name maglev, id 3
+2026-02-06 11:06:48.470416Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name cMurmurHash, id 4
+2026-02-06 11:06:48.470419Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name l5cst, id 5
+2026-02-06 11:06:48.470422Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name ringHash, id 6
+2026-02-06 11:06:48.470567Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name weightedRandom, id 7
+2026-02-06 11:06:48.470689Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name dynamicWeightedRandom, id 22
+2026-02-06 11:06:48.470694Z	info	base	plugin/manage.go:236	Initialized plugin type outlierDetector, name http, id 8
+2026-02-06 11:06:48.470698Z	info	base	plugin/manage.go:236	Initialized plugin type outlierDetector, name tcp, id 9
+2026-02-06 11:06:48.470717Z	info	base	plugin/manage.go:236	Initialized plugin type outlierDetector, name udp, id 10
+2026-02-06 11:06:48.470721Z	info	base	plugin/manage.go:236	Initialized plugin type circuitBreaker, name errorCheck, id 19
+2026-02-06 11:06:48.470724Z	info	base	plugin/manage.go:236	Initialized plugin type circuitBreaker, name errorCount, id 20
+2026-02-06 11:06:48.470727Z	info	base	plugin/manage.go:236	Initialized plugin type circuitBreaker, name errorRate, id 21
+2026-02-06 11:06:48.470729Z	info	base	plugin/manage.go:236	Initialized plugin type weightAdjuster, name rateDelayAdjuster, id 18
+2026-02-06 11:06:48.470736Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name rateLimitRecord, id 27
+2026-02-06 11:06:48.470741Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name serviceCache, id 28
+2026-02-06 11:06:48.470745Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name serviceRoute, id 29
+2026-02-06 11:06:48.471583Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name stat2Monitor, id 26
+2026-02-06 11:06:48.471590Z	info	base	plugin/manage.go:236	Initialized plugin type alarmReporter, name alarm2file, id 1
+2026-02-06 11:06:48.471594Z	info	base	inmemory/inmemory.go:166	LocalCache Real persistDir:/Users/zhengbangli/polaris/backup
+2026-02-06 11:06:48.471633Z	info	base	plugin/manage.go:236	Initialized plugin type localRegistry, name inmemory, id 23
+2026-02-06 11:06:48.471636Z	info	base	plugin/manage.go:236	Initialized plugin type rateLimiter, name reject, id 11
+2026-02-06 11:06:48.471640Z	info	base	plugin/manage.go:236	Initialized plugin type rateLimiter, name unirate, id 24
+2026-02-06 11:06:48.471642Z	info	base	plugin/manage.go:236	Initialized plugin type subScribe, name subscribeLocalChannel, id 25
+2026-02-06 11:06:48.472477Z	info	base	api/config.go:348	
+FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, -------Configuration with default value-------
+global:
+  system:
+    mode: 0
+    discoverCluster:
+      namespace: Polaris
+      service: polaris.discover
+      refreshInterval: 1s
+    healthCheckCluster:
+      namespace: Polaris
+      service: polaris.healthcheck
+      refreshInterval: 10m0s
+    monitorCluster:
+      namespace: Polaris
+      service: polaris.monitor
+      refreshInterval: 10m0s
+    rateLimitCluster: null
+    metricCluster: null
+    dynamicWeightCluster:
+      namespace: Polaris
+      service: polaris.dynamic.weight
+      refreshInterval: 10m0s
+    variables: {}
+    apiVersion: v2
+  api:
+    timeout: 10s
+    bindIf: ""
+    bindIP: ""
+    reportInterval: 10m0s
+    maxRetryTimes: 1
+    retryInterval: 1s
+    location:
+      region: ""
+      zone: ""
+      campus: ""
+      enableUpdate: true
+  serverConnector:
+    addresses:
+    - 9.141.64.64:8081
+    backupAddresses: []
+    protocol: grpc
+    connectTimeout: 500ms
+    messageTimeout: 1.5s
+    watchTimeout: 1m0s
+    connectionIdleTimeout: 3s
+    requestQueueSize: 1000
+    serverSwitchInterval: 2m0s
+    reconnectInterval: 500ms
+    apiVersion: v2
+    joinPoint: ""
+    plugin:
+      grpc:
+        maxCallRecvMsgSize: 52428800
+  statReporter:
+    enable: true
+    chain:
+    - stat2Monitor
+    - serviceCache
+    - rateLimitRecord
+    - serviceRoute
+    plugin:
+      rateLimitRecord:
+        reportInterval: 1m0s
+      serviceCache:
+        reportInterval: 3m0s
+      serviceRoute:
+        reportInterval: 5m0s
+      stat2Monitor:
+        metricsReportWindow: 1m0s
+        metricsNumBuckets: 12
+consumer:
+  localCache:
+    serviceExpireTime: 24h0m0s
+    serviceRefreshInterval: 2s
+    persistDir: $HOME/polaris/backup
+    enablePersistence: null
+    type: inmemory
+    persistMaxWriteRetry: 5
+    persistMaxReadRetry: 1
+    persistRetryInterval: 1s
+    persistAvailableInterval: 1m0s
+    startUseFileCache: true
+    pushEmptyProtection: false
+    plugin: {}
+  serviceRouter:
+    chain:
+    - ruleBasedRouter
+    - nearbyBasedRouter
+    plugin:
+      nearbyBasedRouter:
+        matchLevel: zone
+        maxMatchLevel: ""
+        strictNearby: false
+        enableDegradeByUnhealthyPercent: true
+        unhealthyPercentToDegrade: 100
+    percentOfMinInstances: 0
+    disableRouteSourceContinue: false
+    enableRecoverAll: true
+  loadbalancer:
+    type: weightedRandom
+    plugin:
+      hash:
+        hashFunction: murmur3
+      maglev:
+        hashFunction: murmur3
+        tableSize: 65537
+      ringHash:
+        hashFunction: murmur3
+        vnodeCount: 10
+  circuitBreaker:
+    enable: true
+    checkPeriod: 30s
+    chain:
+    - errorCount
+    - errorRate
+    - errorCheck
+    sleepWindow: 30s
+    requestCountAfterHalfOpen: 10
+    successCountAfterHalfOpen: 8
+    recoverWindow: 1m0s
+    recoverNumBuckets: 10
+    plugin:
+      errorCount:
+        continuousErrorThreshold: 10
+        metricStatTimeWindow: 1m0s
+        metricNumBuckets: 10
+      errorRate:
+        requestVolumeThreshold: 10
+        errorRatePercent: 50
+        errorRateThreshold: 0
+        metricStatTimeWindow: 1m0s
+        metricNumBuckets: 5
+  healthCheck:
+    interval: 10s
+    chain: []
+    plugin:
+      http:
+        timeout: 100ms
+        path: ""
+      tcp:
+        timeout: 100ms
+        retry: 0
+        send: ""
+        receive: ""
+      udp:
+        timeout: 100ms
+        retry: 0
+        send: ""
+        receive: ""
+    when: never
+    concurrency: 0
+  subscribe:
+    type: subscribeLocalChannel
+    plugin:
+      subscribeLocalChannel:
+        channelBufferSize: 30
+  servicesSpecific:
+  - namespace: Polaris
+    service: polaris.discover
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+  - namespace: Polaris
+    service: polaris.healthcheck
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+  - namespace: Polaris
+    service: polaris.monitor
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+  - namespace: Polaris
+    service: polaris.dynamic.weight
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+provider:
+  rateLimit:
+    enable: true
+    plugin:
+      unirate:
+        maxQueuingTime: 1s
+    mode: "\x01"
+    rateLimitCluster:
+      namespace: ""
+      service: ""
+      refreshInterval: 10m0s
+    maxWindowSize: 20000
+    purgeInterval: 1m0s
+
+2026-02-06 11:06:48.472494Z	info	base	api/config.go:353	
+-------FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, All plugins and engine initialized successfully-------
+2026-02-06 11:06:48.472590Z	info	base	common/cache_persist.go:182	Start to load cache from /Users/zhengbangli/polaris/backup/client_info.json
+2026-02-06 11:06:48.472644Z	info	base	network/impl.go:370	connectionManager start updateDiscover
+2026-02-06 11:06:48.472652Z	warn	base	startup/client_report.go:72	fail to load local region info from client_info.json, err is load message from /Users/zhengbangli/polaris/backup/client_info.json failed after retry 0 times polaris-go version: 0.12.12, Polaris-3001(ErrCodeUnknown): fail to read file cache, cause: open /Users/zhengbangli/polaris/backup/client_info.json: permission denied
+2026-02-06 11:06:48.472669Z	info	base	schedule/routines.go:228	item clientReportTask in task clientReportTask has added
+2026-02-06 11:06:48.472684Z	info	base	schedule/routines.go:115	task clientReportTask started period 5m0s
+2026-02-06 11:06:48.472690Z	info	base	schedule/routines.go:277	task clientReportTask has been started
+2026-02-06 11:06:48.472694Z	info	base	schedule/routines.go:228	item sdkConfigReportTask in task sdkConfigReportTask has added
+2026-02-06 11:06:48.472697Z	info	base	schedule/routines.go:115	task sdkConfigReportTask started period 2m30s
+2026-02-06 11:06:48.472701Z	info	base	schedule/routines.go:277	task sdkConfigReportTask has been started
+2026-02-06 11:06:48.472704Z	info	base	api/config.go:363	
+-------FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, All plugins and engine started successfully-------
+2026-02-06 11:06:48.472709Z	info	base	api/config.go:371	
+-------FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, SDKContext init successfully-------
+2026-02-06 11:06:48.472974Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.report.test", event: instance}
+2026-02-06 11:06:48.472865Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.discover", event: instance}
+2026-02-06 11:06:48.473025Z	info	base	inmemory/inmemory.go:550	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, start to register event handler for {namespace: "Polaris", service: "polaris.discover", event: instance}
+2026-02-06 11:06:48.473007Z	info	base	inmemory/inmemory.go:550	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, start to register event handler for {namespace: "Polaris", service: "polaris.report.test", event: instance}
+2026-02-06 11:06:48.473074Z	info	base	common/register.go:52	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: start to add first task for {namespace: "Polaris", service: "polaris.discover", event: instance, initialized: firstTask}
+2026-02-06 11:06:48.473110Z	info	base	common/register.go:52	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: start to add first task for {namespace: "Polaris", service: "polaris.report.test", event: instance, initialized: firstTask}
+2026-02-06 11:06:48.473122Z	info	base	common/register.go:65	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: finish add first task for {namespace: "Polaris", service: "polaris.discover", event: instance, initialized: firstTask}
+2026-02-06 11:06:48.473229Z	info	base	inmemory/inmemory.go:552	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, finish register event handler for {namespace: "Polaris", service: "polaris.discover", event: instance}, err <nil>
+2026-02-06 11:06:48.473220Z	info	base	common/register.go:65	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: finish add first task for {namespace: "Polaris", service: "polaris.report.test", event: instance, initialized: firstTask}
+2026-02-06 11:06:48.473220Z	info	base	common/discover.go:181	receive init task: {namespace: "Polaris", service: "polaris.report.test", event: instance, initialized: firstTask}
+2026-02-06 11:06:48.473239Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.discover", event: routing}
+2026-02-06 11:06:48.473280Z	info	base	network/impl.go:410	get connection of discover for Discover
+2026-02-06 11:06:48.473253Z	info	base	inmemory/inmemory.go:552	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, finish register event handler for {namespace: "Polaris", service: "polaris.report.test", event: instance}, err <nil>
+2026-02-06 11:06:48.473280Z	info	base	inmemory/inmemory.go:550	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, start to register event handler for {namespace: "Polaris", service: "polaris.discover", event: routing}
+2026-02-06 11:06:48.473294Z	info	base	common/register.go:52	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: start to add first task for {namespace: "Polaris", service: "polaris.discover", event: routing, initialized: firstTask}
+2026-02-06 11:06:48.473294Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.report.test", event: routing}
+2026-02-06 11:06:48.473302Z	info	base	inmemory/inmemory.go:550	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, start to register event handler for {namespace: "Polaris", service: "polaris.report.test", event: routing}
+2026-02-06 11:06:48.473305Z	info	base	network/impl.go:410	get connection of builtin for System
+2026-02-06 11:06:48.473299Z	info	base	common/register.go:65	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: finish add first task for {namespace: "Polaris", service: "polaris.discover", event: routing, initialized: firstTask}
+2026-02-06 11:06:48.473333Z	info	base	inmemory/inmemory.go:552	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, finish register event handler for {namespace: "Polaris", service: "polaris.discover", event: routing}, err <nil>
+2026-02-06 11:06:48.473307Z	info	base	common/register.go:52	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: start to add first task for {namespace: "Polaris", service: "polaris.report.test", event: routing, initialized: firstTask}
+2026-02-06 11:06:48.473349Z	info	base	common/register.go:65	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, addTask: finish add first task for {namespace: "Polaris", service: "polaris.report.test", event: routing, initialized: firstTask}
+2026-02-06 11:06:48.473353Z	info	base	inmemory/inmemory.go:552	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, finish register event handler for {namespace: "Polaris", service: "polaris.report.test", event: routing}, err <nil>
+2026-02-06 11:06:48.474908Z	info	base	grpc/creator.go:88	localAddress from connection is 30.20.170.44:62865, IP is 30.20.170.44, hashValue is 8804029340865530284
+2026-02-06 11:06:48.572936Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.discover#routing.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: routing}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#routing.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#routing.json: no such file or directory
+2026-02-06 11:06:48.572980Z	info	base	common/cache_persist.go:182	Start to load cache from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#routing.json
+2026-02-06 11:06:48.573044Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.discover#routing.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: routing}, error is load message from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#routing.json failed after retry 0 times polaris-go version: 0.12.12, Polaris-3001(ErrCodeUnknown): fail to read file cache, cause: open /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#routing.json: permission denied
+2026-02-06 11:06:48.573057Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.discover#instance.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: instance}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#instance.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#instance.json: no such file or directory
+2026-02-06 11:06:48.573066Z	info	base	common/cache_persist.go:182	Start to load cache from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#instance.json
+2026-02-06 11:06:48.573098Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.discover#instance.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: instance}, error is load message from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#instance.json failed after retry 0 times polaris-go version: 0.12.12, Polaris-3001(ErrCodeUnknown): fail to read file cache, cause: open /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#instance.json: permission denied
+2026-02-06 11:06:48.573110Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.report.test#routing.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: routing}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#routing.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#routing.json: no such file or directory
+2026-02-06 11:06:48.573119Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.report.test#routing.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: routing}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#routing.json:  stat /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#routing.json: no such file or directory
+2026-02-06 11:06:48.573126Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.report.test#instance.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: instance}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#instance.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#instance.json: no such file or directory
+2026-02-06 11:06:48.573330Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.report.test#instance.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: instance}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#instance.json:  stat /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#instance.json: no such file or directory
+2026-02-06 11:06:48.773460Z	error	base	flow/sync_flow.go:182	fail to get resource of {namespace: "Polaris", service: "polaris.discover"} for timeout, retryTimes: 0, total consumed time: 300.557125ms, total sleep time: 0s
+2026-02-06 11:06:48.773495Z	error	base	flow/sync_flow.go:186	retry times exceed 0 in SyncGetResources, serviceKey: {namespace: "Polaris", service: "polaris.discover"}, timeout is 300ms
+2026-02-06 11:06:48.773461Z	error	base	flow/sync_flow.go:182	fail to get resource of {namespace: "Polaris", service: "polaris.discover"} for timeout, retryTimes: 0, total consumed time: 300.557125ms, total sleep time: 0s
+2026-02-06 11:06:48.773508Z	error	base	network/impl.go:374	connectionManager get discover service err: polaris-go version: 0.12.12, Polaris-1004(ErrCodeAPITimeoutError): retry times exceed 0 in SyncGetResources, serviceKey: {namespace: "Polaris", service: "polaris.discover"}, timeout is 300ms
+2026-02-06 11:06:48.773509Z	error	base	flow/sync_flow.go:186	retry times exceed 0 in SyncGetResources, serviceKey: {namespace: "Polaris", service: "polaris.discover"}, timeout is 300ms
+2026-02-06 11:06:48.773569Z	info	base	common/discover.go:181	receive init task: {namespace: "Polaris", service: "polaris.report.test", event: routing, initialized: firstTask}
+2026-02-06 11:06:48.773583Z	info	base	network/impl.go:410	get connection of discover for Discover
+2026-02-06 11:06:48.783622Z	info	base	network/impl.go:370	connectionManager start updateDiscover
+2026-02-06 11:06:48.804528Z	info	base	inmemory/model.go:342	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, OnServiceUpdate: {namespace: "Polaris", service: "polaris.discover", event: instance}, status: CacheChanged, pending to update, oldRevision: , newRevision: 22a5ac8e78565fc659bb3457bf1c7076b036f9df
+2026-02-06 11:06:48.804576Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.discover", event: instance} is updated, revision 22a5ac8e78565fc659bb3457bf1c7076b036f9df
+2026-02-06 11:06:48.804586Z	info	base	network/impl.go:577	discover server updated to ready 1, event is {namespace: "Polaris", service: "polaris.discover", event: instance}
+2026-02-06 11:06:48.804595Z	info	base	network/conn.go:116	release connection: {ID:2430399934,Address:9.141.64.64:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris-default"}, ClusterType: builtin}}
+2026-02-06 11:06:48.804607Z	info	base	network/impl.go:410	get connection of builtin for System
+2026-02-06 11:06:48.869883Z	info	base	inmemory/model.go:342	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, OnServiceUpdate: {namespace: "Polaris", service: "polaris.discover", event: routing}, status: CacheChanged, pending to update, oldRevision: , newRevision: 
+2026-02-06 11:06:48.869897Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.discover", event: routing} is updated, revision 
+2026-02-06 11:06:48.869908Z	info	base	network/impl.go:577	discover server updated to ready 2, event is {namespace: "Polaris", service: "polaris.discover", event: routing}
+2026-02-06 11:06:48.869928Z	info	base	network/conn.go:116	release connection: {ID:2430399934,Address:9.141.64.64:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris-default"}, ClusterType: builtin}}
+2026-02-06 11:06:48.869936Z	warn	base	flow/sync_flow.go:177	retryTimes 0 equals maxRetryTimes 0, get {namespace: "Polaris", service: "polaris.discover"} from cache
+2026-02-06 11:06:48.869931Z	info	base	serviceinfo/service_info.go:277	service instances of {namespace: "Polaris", service: "polaris.discover"} change, oldRevision , newRevision 22a5ac8e78565fc659bb3457bf1c7076b036f9df, oldCount 0, newCount 6
+2026-02-06 11:06:48.869954Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 9.141.64.64:8091, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:48.869959Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 30.163.16.111:8080, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:48.869963Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 30.163.16.111:8091, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:48.869966Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 30.163.16.111:8081, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:48.869969Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 9.141.64.64:8081, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:48.869971Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 9.141.64.64:8080, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:48.869977Z	info	base	schedule/routines.go:228	item {namespace: "Polaris", service: "polaris.discover"} in task circuitBreakTask has added
+2026-02-06 11:06:48.869983Z	info	base	schedule/routines.go:112	task circuitBreakTask started priority
+2026-02-06 11:06:48.869990Z	warn	base	flow/sync_flow.go:177	retryTimes 0 equals maxRetryTimes 0, get {namespace: "Polaris", service: "polaris.discover"} from cache
+2026-02-06 11:06:48.872681Z	info	base	common/cache_persist.go:255	Start to save cache to file /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#routing.json
+2026-02-06 11:06:48.877166Z	info	base	grpc/operation_sync.go:181	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, waitDiscover: discover service is ready
+2026-02-06 11:06:48.879204Z	info	base	network/impl.go:410	get connection of discover for ReportClient
+2026-02-06 11:06:49.082907Z	info	base	network/conn.go:116	release connection: {ID:395744781,Address:9.141.64.64:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris.discover"}, ClusterType: discover}}
+2026-02-06 11:06:49.082945Z	info	base	startup/client_report.go:138	current client area info is Host:30.20.170.44-{Region:, Zone:, Campus:}
+2026-02-06 11:06:49.155645Z	info	base	inmemory/model.go:342	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, OnServiceUpdate: {namespace: "Polaris", service: "polaris.report.test", event: instance}, status: CacheChanged, pending to update, oldRevision: , newRevision: 60b3893cc5bcf9bcd9bff101676314964c34e38d
+2026-02-06 11:06:49.155680Z	info	base	pb/service.go:197	service Polaris::polaris.report.test nearby enabled
+2026-02-06 11:06:49.155710Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.report.test", event: instance} is updated, revision 60b3893cc5bcf9bcd9bff101676314964c34e38d
+2026-02-06 11:06:49.157223Z	info	base	inmemory/model.go:342	FD1FF357-85BD-46E5-8A5A-E28844D3E7E1, OnServiceUpdate: {namespace: "Polaris", service: "polaris.report.test", event: routing}, status: CacheChanged, pending to update, oldRevision: , newRevision: 
+2026-02-06 11:06:49.157240Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.report.test", event: routing} is updated, revision 
+2026-02-06 11:06:49.157265Z	info	base	serviceinfo/service_info.go:277	service instances of {namespace: "Polaris", service: "polaris.report.test"} change, oldRevision , newRevision 60b3893cc5bcf9bcd9bff101676314964c34e38d, oldCount 0, newCount 2
+2026-02-06 11:06:49.157270Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.report.test"}: 11.181.41.119:8089, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:49.157273Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.report.test"}: 11.145.92.114:8089, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:06:49.157280Z	info	base	schedule/routines.go:228	item {namespace: "Polaris", service: "polaris.report.test"} in task circuitBreakTask has added
+2026-02-06 11:15:27.001164Z	warn	base	config/default.go:401	no IP or interface name configured
+2026-02-06 11:15:27.002192Z	info	base	api/config.go:293	global clock started
+2026-02-06 11:15:27.002231Z	warn	base	config/default.go:401	no IP or interface name configured
+2026-02-06 11:15:27.002249Z	info	base	api/config.go:321	
+-------Start to init SDKContext of version 0.12.12, IP: , PID: 19644, UID: ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, CONTAINER: , HOSTNAME:-------
+2026-02-06 11:15:27.002338Z	info	base	grpc/operation_async.go:88	set grpc plugin as connectionCreator
+2026-02-06 11:15:27.002403Z	info	base	plugin/manage.go:236	Initialized plugin type serverConnector, name grpc, id 30
+2026-02-06 11:15:27.002426Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name canaryRouter, id 12
+2026-02-06 11:15:27.002430Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name dstMetaRouter, id 13
+2026-02-06 11:15:27.002435Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name filterOnlyRouter, id 14
+2026-02-06 11:15:27.002572Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name nearbyBasedRouter, id 15
+2026-02-06 11:15:27.002717Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name ruleBasedRouter, id 16
+2026-02-06 11:15:27.002723Z	info	base	plugin/manage.go:236	Initialized plugin type serviceRouter, name setDivisionRouter, id 17
+2026-02-06 11:15:27.002850Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name weightedRandom, id 7
+2026-02-06 11:15:27.002974Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name dynamicWeightedRandom, id 22
+2026-02-06 11:15:27.002980Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name hash, id 2
+2026-02-06 11:15:27.002983Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name maglev, id 3
+2026-02-06 11:15:27.002990Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name cMurmurHash, id 4
+2026-02-06 11:15:27.002994Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name l5cst, id 5
+2026-02-06 11:15:27.002997Z	info	base	plugin/manage.go:236	Initialized plugin type loadBalancer, name ringHash, id 6
+2026-02-06 11:15:27.003001Z	info	base	plugin/manage.go:236	Initialized plugin type outlierDetector, name udp, id 10
+2026-02-06 11:15:27.003004Z	info	base	plugin/manage.go:236	Initialized plugin type outlierDetector, name http, id 8
+2026-02-06 11:15:27.003007Z	info	base	plugin/manage.go:236	Initialized plugin type outlierDetector, name tcp, id 9
+2026-02-06 11:15:27.003011Z	info	base	plugin/manage.go:236	Initialized plugin type circuitBreaker, name errorRate, id 21
+2026-02-06 11:15:27.003014Z	info	base	plugin/manage.go:236	Initialized plugin type circuitBreaker, name errorCheck, id 19
+2026-02-06 11:15:27.003017Z	info	base	plugin/manage.go:236	Initialized plugin type circuitBreaker, name errorCount, id 20
+2026-02-06 11:15:27.003020Z	info	base	plugin/manage.go:236	Initialized plugin type weightAdjuster, name rateDelayAdjuster, id 18
+2026-02-06 11:15:27.003821Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name stat2Monitor, id 26
+2026-02-06 11:15:27.003829Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name rateLimitRecord, id 27
+2026-02-06 11:15:27.003836Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name serviceCache, id 28
+2026-02-06 11:15:27.003841Z	info	base	plugin/manage.go:236	Initialized plugin type statReporter, name serviceRoute, id 29
+2026-02-06 11:15:27.003845Z	info	base	plugin/manage.go:236	Initialized plugin type alarmReporter, name alarm2file, id 1
+2026-02-06 11:15:27.003850Z	info	base	inmemory/inmemory.go:166	LocalCache Real persistDir:/Users/zhengbangli/polaris/backup
+2026-02-06 11:15:27.003896Z	info	base	plugin/manage.go:236	Initialized plugin type localRegistry, name inmemory, id 23
+2026-02-06 11:15:27.003900Z	info	base	plugin/manage.go:236	Initialized plugin type rateLimiter, name unirate, id 24
+2026-02-06 11:15:27.004142Z	info	base	plugin/manage.go:236	Initialized plugin type rateLimiter, name reject, id 11
+2026-02-06 11:15:27.004215Z	info	base	plugin/manage.go:236	Initialized plugin type subScribe, name subscribeLocalChannel, id 25
+2026-02-06 11:15:27.004734Z	info	base	api/config.go:348	
+ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, -------Configuration with default value-------
+global:
+  system:
+    mode: 0
+    discoverCluster:
+      namespace: Polaris
+      service: polaris.discover
+      refreshInterval: 1s
+    healthCheckCluster:
+      namespace: Polaris
+      service: polaris.healthcheck
+      refreshInterval: 10m0s
+    monitorCluster:
+      namespace: Polaris
+      service: polaris.monitor
+      refreshInterval: 10m0s
+    rateLimitCluster: null
+    metricCluster: null
+    dynamicWeightCluster:
+      namespace: Polaris
+      service: polaris.dynamic.weight
+      refreshInterval: 10m0s
+    variables: {}
+    apiVersion: v2
+  api:
+    timeout: 10s
+    bindIf: ""
+    bindIP: ""
+    reportInterval: 10m0s
+    maxRetryTimes: 1
+    retryInterval: 1s
+    location:
+      region: ""
+      zone: ""
+      campus: ""
+      enableUpdate: true
+  serverConnector:
+    addresses:
+    - 9.141.64.64:8081
+    backupAddresses: []
+    protocol: grpc
+    connectTimeout: 500ms
+    messageTimeout: 1.5s
+    watchTimeout: 1m0s
+    connectionIdleTimeout: 3s
+    requestQueueSize: 1000
+    serverSwitchInterval: 2m0s
+    reconnectInterval: 500ms
+    apiVersion: v2
+    joinPoint: ""
+    plugin:
+      grpc:
+        maxCallRecvMsgSize: 52428800
+  statReporter:
+    enable: true
+    chain:
+    - stat2Monitor
+    - serviceCache
+    - rateLimitRecord
+    - serviceRoute
+    plugin:
+      rateLimitRecord:
+        reportInterval: 1m0s
+      serviceCache:
+        reportInterval: 3m0s
+      serviceRoute:
+        reportInterval: 5m0s
+      stat2Monitor:
+        metricsReportWindow: 1m0s
+        metricsNumBuckets: 12
+consumer:
+  localCache:
+    serviceExpireTime: 24h0m0s
+    serviceRefreshInterval: 2s
+    persistDir: $HOME/polaris/backup
+    enablePersistence: null
+    type: inmemory
+    persistMaxWriteRetry: 5
+    persistMaxReadRetry: 1
+    persistRetryInterval: 1s
+    persistAvailableInterval: 1m0s
+    startUseFileCache: true
+    pushEmptyProtection: false
+    plugin: {}
+  serviceRouter:
+    chain:
+    - ruleBasedRouter
+    - nearbyBasedRouter
+    plugin:
+      nearbyBasedRouter:
+        matchLevel: zone
+        maxMatchLevel: ""
+        strictNearby: false
+        enableDegradeByUnhealthyPercent: true
+        unhealthyPercentToDegrade: 100
+    percentOfMinInstances: 0
+    disableRouteSourceContinue: false
+    enableRecoverAll: true
+  loadbalancer:
+    type: weightedRandom
+    plugin:
+      hash:
+        hashFunction: murmur3
+      maglev:
+        hashFunction: murmur3
+        tableSize: 65537
+      ringHash:
+        hashFunction: murmur3
+        vnodeCount: 10
+  circuitBreaker:
+    enable: true
+    checkPeriod: 30s
+    chain:
+    - errorCount
+    - errorRate
+    - errorCheck
+    sleepWindow: 30s
+    requestCountAfterHalfOpen: 10
+    successCountAfterHalfOpen: 8
+    recoverWindow: 1m0s
+    recoverNumBuckets: 10
+    plugin:
+      errorCount:
+        continuousErrorThreshold: 10
+        metricStatTimeWindow: 1m0s
+        metricNumBuckets: 10
+      errorRate:
+        requestVolumeThreshold: 10
+        errorRatePercent: 50
+        errorRateThreshold: 0
+        metricStatTimeWindow: 1m0s
+        metricNumBuckets: 5
+  healthCheck:
+    interval: 10s
+    chain: []
+    plugin:
+      http:
+        timeout: 100ms
+        path: ""
+      tcp:
+        timeout: 100ms
+        retry: 0
+        send: ""
+        receive: ""
+      udp:
+        timeout: 100ms
+        retry: 0
+        send: ""
+        receive: ""
+    when: never
+    concurrency: 0
+  subscribe:
+    type: subscribeLocalChannel
+    plugin:
+      subscribeLocalChannel:
+        channelBufferSize: 30
+  servicesSpecific:
+  - namespace: Polaris
+    service: polaris.discover
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+  - namespace: Polaris
+    service: polaris.healthcheck
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+  - namespace: Polaris
+    service: polaris.monitor
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+  - namespace: Polaris
+    service: polaris.dynamic.weight
+    serviceRouter:
+      chain:
+      - dstMetaRouter
+      - nearbyBasedRouter
+      plugin:
+        nearbyBasedRouter:
+          matchLevel: region
+          maxMatchLevel: ""
+          strictNearby: false
+          enableDegradeByUnhealthyPercent: true
+          unhealthyPercentToDegrade: 100
+      percentOfMinInstances: 0
+      disableRouteSourceContinue: false
+      enableRecoverAll: true
+    circuitBreaker:
+      enable: true
+      checkPeriod: 30s
+      chain:
+      - errorCount
+      - errorRate
+      - errorCheck
+      sleepWindow: 30s
+      requestCountAfterHalfOpen: 10
+      successCountAfterHalfOpen: 8
+      recoverWindow: 1m0s
+      recoverNumBuckets: 10
+      plugin:
+        errorCount:
+          continuousErrorThreshold: 1
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 10
+        errorRate:
+          requestVolumeThreshold: 10
+          errorRatePercent: 50
+          errorRateThreshold: 0
+          metricStatTimeWindow: 1m0s
+          metricNumBuckets: 5
+    healthCheck:
+      interval: 10s
+      chain: []
+      plugin:
+        http:
+          timeout: 100ms
+          path: ""
+        tcp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+        udp:
+          timeout: 100ms
+          retry: 0
+          send: ""
+          receive: ""
+      when: never
+      concurrency: 0
+provider:
+  rateLimit:
+    enable: true
+    plugin:
+      unirate:
+        maxQueuingTime: 1s
+    mode: "\x01"
+    rateLimitCluster:
+      namespace: ""
+      service: ""
+      refreshInterval: 10m0s
+    maxWindowSize: 20000
+    purgeInterval: 1m0s
+
+2026-02-06 11:15:27.004745Z	info	base	api/config.go:353	
+-------ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, All plugins and engine initialized successfully-------
+2026-02-06 11:15:27.004786Z	info	base	common/cache_persist.go:182	Start to load cache from /Users/zhengbangli/polaris/backup/client_info.json
+2026-02-06 11:15:27.004890Z	info	base	network/impl.go:370	connectionManager start updateDiscover
+2026-02-06 11:15:27.005084Z	warn	base	startup/client_report.go:72	fail to load local region info from client_info.json, err is load message from /Users/zhengbangli/polaris/backup/client_info.json failed after retry 0 times polaris-go version: 0.12.12, Polaris-3001(ErrCodeUnknown): fail to read file cache, cause: open /Users/zhengbangli/polaris/backup/client_info.json: permission denied
+2026-02-06 11:15:27.005157Z	info	base	schedule/routines.go:228	item clientReportTask in task clientReportTask has added
+2026-02-06 11:15:27.005199Z	info	base	schedule/routines.go:115	task clientReportTask started period 5m0s
+2026-02-06 11:15:27.005208Z	info	base	schedule/routines.go:277	task clientReportTask has been started
+2026-02-06 11:15:27.005208Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.discover", event: instance}
+2026-02-06 11:15:27.005214Z	info	base	schedule/routines.go:228	item sdkConfigReportTask in task sdkConfigReportTask has added
+2026-02-06 11:15:27.005320Z	info	base	inmemory/inmemory.go:550	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, start to register event handler for {namespace: "Polaris", service: "polaris.discover", event: instance}
+2026-02-06 11:15:27.005326Z	info	base	schedule/routines.go:115	task sdkConfigReportTask started period 2m30s
+2026-02-06 11:15:27.005337Z	info	base	schedule/routines.go:277	task sdkConfigReportTask has been started
+2026-02-06 11:15:27.005342Z	info	base	api/config.go:363	
+-------ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, All plugins and engine started successfully-------
+2026-02-06 11:15:27.005349Z	info	base	api/config.go:371	
+-------ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, SDKContext init successfully-------
+2026-02-06 11:15:27.005332Z	info	base	common/register.go:52	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: start to add first task for {namespace: "Polaris", service: "polaris.discover", event: instance, initialized: firstTask}
+2026-02-06 11:15:27.005362Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.report.test", event: instance}
+2026-02-06 11:15:27.005373Z	info	base	common/register.go:65	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: finish add first task for {namespace: "Polaris", service: "polaris.discover", event: instance, initialized: firstTask}
+2026-02-06 11:15:27.005386Z	info	base	inmemory/inmemory.go:552	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, finish register event handler for {namespace: "Polaris", service: "polaris.discover", event: instance}, err <nil>
+2026-02-06 11:15:27.005377Z	info	base	inmemory/inmemory.go:550	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, start to register event handler for {namespace: "Polaris", service: "polaris.report.test", event: instance}
+2026-02-06 11:15:27.005404Z	info	base	common/register.go:52	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: start to add first task for {namespace: "Polaris", service: "polaris.report.test", event: instance, initialized: firstTask}
+2026-02-06 11:15:27.005395Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.discover", event: routing}
+2026-02-06 11:15:27.005415Z	info	base	common/discover.go:181	receive init task: {namespace: "Polaris", service: "polaris.report.test", event: instance, initialized: firstTask}
+2026-02-06 11:15:27.005412Z	info	base	common/register.go:65	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: finish add first task for {namespace: "Polaris", service: "polaris.report.test", event: instance, initialized: firstTask}
+2026-02-06 11:15:27.005437Z	info	base	network/impl.go:410	get connection of discover for Discover
+2026-02-06 11:15:27.005422Z	info	base	inmemory/inmemory.go:550	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, start to register event handler for {namespace: "Polaris", service: "polaris.discover", event: routing}
+2026-02-06 11:15:27.005459Z	info	base	common/register.go:52	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: start to add first task for {namespace: "Polaris", service: "polaris.discover", event: routing, initialized: firstTask}
+2026-02-06 11:15:27.005470Z	info	base	common/register.go:65	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: finish add first task for {namespace: "Polaris", service: "polaris.discover", event: routing, initialized: firstTask}
+2026-02-06 11:15:27.005476Z	info	base	inmemory/inmemory.go:552	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, finish register event handler for {namespace: "Polaris", service: "polaris.discover", event: routing}, err <nil>
+2026-02-06 11:15:27.005477Z	info	base	network/impl.go:410	get connection of builtin for System
+2026-02-06 11:15:27.005437Z	info	base	inmemory/inmemory.go:552	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, finish register event handler for {namespace: "Polaris", service: "polaris.report.test", event: instance}, err <nil>
+2026-02-06 11:15:27.005513Z	info	base	inmemory/inmemory.go:1201	start to add load cache task for {namespace: "Polaris", service: "polaris.report.test", event: routing}
+2026-02-06 11:15:27.005520Z	info	base	inmemory/inmemory.go:550	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, start to register event handler for {namespace: "Polaris", service: "polaris.report.test", event: routing}
+2026-02-06 11:15:27.005526Z	info	base	common/register.go:52	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: start to add first task for {namespace: "Polaris", service: "polaris.report.test", event: routing, initialized: firstTask}
+2026-02-06 11:15:27.005532Z	info	base	common/register.go:65	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, addTask: finish add first task for {namespace: "Polaris", service: "polaris.report.test", event: routing, initialized: firstTask}
+2026-02-06 11:15:27.005537Z	info	base	inmemory/inmemory.go:552	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, finish register event handler for {namespace: "Polaris", service: "polaris.report.test", event: routing}, err <nil>
+2026-02-06 11:15:27.007773Z	info	base	grpc/creator.go:88	localAddress from connection is 30.20.170.44:53432, IP is 30.20.170.44, hashValue is 8804029340865530284
+2026-02-06 11:15:27.105474Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.discover#instance.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: instance}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#instance.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#instance.json: no such file or directory
+2026-02-06 11:15:27.105535Z	info	base	common/cache_persist.go:182	Start to load cache from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#instance.json
+2026-02-06 11:15:27.105617Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.discover#instance.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: instance}, error is load message from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#instance.json failed after retry 0 times polaris-go version: 0.12.12, Polaris-3001(ErrCodeUnknown): fail to read file cache, cause: open /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#instance.json: permission denied
+2026-02-06 11:15:27.105641Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.discover#routing.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: routing}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#routing.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.discover#routing.json: no such file or directory
+2026-02-06 11:15:27.105656Z	info	base	common/cache_persist.go:182	Start to load cache from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#routing.json
+2026-02-06 11:15:27.105693Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.discover#routing.json, svcKey: {namespace: "Polaris", service: "polaris.discover", event: routing}, error is load message from /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#routing.json failed after retry 0 times polaris-go version: 0.12.12, Polaris-3001(ErrCodeUnknown): fail to read file cache, cause: open /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#routing.json: permission denied
+2026-02-06 11:15:27.105708Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.report.test#instance.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: instance}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#instance.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#instance.json: no such file or directory
+2026-02-06 11:15:27.105722Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.report.test#instance.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: instance}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#instance.json:  stat /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#instance.json: no such file or directory
+2026-02-06 11:15:27.105734Z	error	base	common/cache_persist.go:130	fail to load cache from file svcV2#Polaris#polaris.report.test#routing.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: routing}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#routing.json:  stat /Users/zhengbangli/polaris/backup/svcV2#Polaris#polaris.report.test#routing.json: no such file or directory
+2026-02-06 11:15:27.105745Z	error	base	common/cache_persist.go:130	fail to load cache from file svc#Polaris#polaris.report.test#routing.json, svcKey: {namespace: "Polaris", service: "polaris.report.test", event: routing}, error is Fail to Stat the cache file name /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#routing.json:  stat /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.report.test#routing.json: no such file or directory
+2026-02-06 11:15:27.218167Z	info	base	inmemory/model.go:342	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, OnServiceUpdate: {namespace: "Polaris", service: "polaris.discover", event: instance}, status: CacheChanged, pending to update, oldRevision: , newRevision: 22a5ac8e78565fc659bb3457bf1c7076b036f9df
+2026-02-06 11:15:27.218234Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.discover", event: instance} is updated, revision 22a5ac8e78565fc659bb3457bf1c7076b036f9df
+2026-02-06 11:15:27.218248Z	info	base	network/impl.go:577	discover server updated to ready 1, event is {namespace: "Polaris", service: "polaris.discover", event: instance}
+2026-02-06 11:15:27.218262Z	info	base	network/conn.go:116	release connection: {ID:2713892363,Address:9.141.64.64:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris-default"}, ClusterType: builtin}}
+2026-02-06 11:15:27.218278Z	info	base	network/impl.go:410	get connection of builtin for System
+2026-02-06 11:15:27.278990Z	info	base	inmemory/model.go:342	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, OnServiceUpdate: {namespace: "Polaris", service: "polaris.discover", event: routing}, status: CacheChanged, pending to update, oldRevision: , newRevision: 
+2026-02-06 11:15:27.279006Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.discover", event: routing} is updated, revision 
+2026-02-06 11:15:27.279018Z	info	base	network/impl.go:577	discover server updated to ready 2, event is {namespace: "Polaris", service: "polaris.discover", event: routing}
+2026-02-06 11:15:27.279044Z	info	base	network/conn.go:116	release connection: {ID:2713892363,Address:9.141.64.64:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris-default"}, ClusterType: builtin}}
+2026-02-06 11:15:27.279053Z	warn	base	flow/sync_flow.go:177	retryTimes 0 equals maxRetryTimes 0, get {namespace: "Polaris", service: "polaris.discover"} from cache
+2026-02-06 11:15:27.279058Z	info	base	serviceinfo/service_info.go:277	service instances of {namespace: "Polaris", service: "polaris.discover"} change, oldRevision , newRevision 22a5ac8e78565fc659bb3457bf1c7076b036f9df, oldCount 0, newCount 6
+2026-02-06 11:15:27.279094Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 9.141.64.64:8091, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.279104Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 30.163.16.111:8080, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.279110Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 30.163.16.111:8091, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.279116Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 30.163.16.111:8081, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.279124Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 9.141.64.64:8081, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.279130Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.discover"}: 9.141.64.64:8080, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.279140Z	info	base	schedule/routines.go:228	item {namespace: "Polaris", service: "polaris.discover"} in task circuitBreakTask has added
+2026-02-06 11:15:27.279149Z	info	base	schedule/routines.go:112	task circuitBreakTask started priority
+2026-02-06 11:15:27.279160Z	warn	base	flow/sync_flow.go:177	retryTimes 0 equals maxRetryTimes 0, get {namespace: "Polaris", service: "polaris.discover"} from cache
+2026-02-06 11:15:27.284417Z	info	base	grpc/operation_sync.go:181	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, waitDiscover: discover service is ready
+2026-02-06 11:15:27.284460Z	info	base	network/impl.go:410	get connection of discover for ReportClient
+2026-02-06 11:15:27.304981Z	info	base	common/cache_persist.go:255	Start to save cache to file /Users/zhengbangli/polaris/backup/svc#Polaris#polaris.discover#instance.json
+2026-02-06 11:15:27.548419Z	info	base	common/discover.go:181	receive init task: {namespace: "Polaris", service: "polaris.report.test", event: routing, initialized: firstTask}
+2026-02-06 11:15:27.568874Z	info	base	network/conn.go:116	release connection: {ID:4236041163,Address:30.163.16.111:8081,Service:{ServiceKey: {namespace: "Polaris", service: "polaris.discover"}, ClusterType: discover}}
+2026-02-06 11:15:27.568928Z	info	base	startup/client_report.go:138	current client area info is Host:30.20.170.44-{Region:, Zone:, Campus:}
+2026-02-06 11:15:27.946070Z	info	base	inmemory/model.go:342	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, OnServiceUpdate: {namespace: "Polaris", service: "polaris.report.test", event: instance}, status: CacheChanged, pending to update, oldRevision: , newRevision: 60b3893cc5bcf9bcd9bff101676314964c34e38d
+2026-02-06 11:15:27.946124Z	info	base	pb/service.go:197	service Polaris::polaris.report.test nearby enabled
+2026-02-06 11:15:27.946168Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.report.test", event: instance} is updated, revision 60b3893cc5bcf9bcd9bff101676314964c34e38d
+2026-02-06 11:15:27.946213Z	info	base	inmemory/model.go:342	ED8D264E-4FB1-4FDE-B1B3-3859F66B363C, OnServiceUpdate: {namespace: "Polaris", service: "polaris.report.test", event: routing}, status: CacheChanged, pending to update, oldRevision: , newRevision: 
+2026-02-06 11:15:27.946228Z	info	base	inmemory/model.go:540	CacheObject: value for {namespace: "Polaris", service: "polaris.report.test", event: routing} is updated, revision 
+2026-02-06 11:15:27.946270Z	info	base	serviceinfo/service_info.go:277	service instances of {namespace: "Polaris", service: "polaris.report.test"} change, oldRevision , newRevision 60b3893cc5bcf9bcd9bff101676314964c34e38d, oldCount 0, newCount 2
+2026-02-06 11:15:27.946289Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.report.test"}: 11.181.41.119:8089, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.946298Z	info	base	serviceinfo/service_info.go:280	add instance of {namespace: "Polaris", service: "polaris.report.test"}: 11.145.92.114:8089, status: healthy:true;isolate:false;weight:100
+2026-02-06 11:15:27.946309Z	info	base	schedule/routines.go:228	item {namespace: "Polaris", service: "polaris.report.test"} in task circuitBreakTask has added
