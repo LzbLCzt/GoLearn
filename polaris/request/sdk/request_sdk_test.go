@@ -1,7 +1,6 @@
 package sdk
 
 import (
-	"strings"
 	"testing"
 	"time"
 
@@ -12,9 +11,6 @@ import (
 
 	"GoLearn/polaris/util"
 )
-
-var Consumer api.ConsumerAPI
-var Provider api.ProviderAPI
 
 func TestSdkRequest_CreateInstance(t *testing.T) {
 	err := InitPolarisProviderByYaml("polaris.yaml")
@@ -124,49 +120,4 @@ func TestSdkRequest_GetOneInstance(t *testing.T) {
 		log.Infof("metadata: key is %s, value is %s", key, value)
 	}
 
-}
-
-func InitPolarisProviderByYaml(path string) error {
-	if Provider != nil {
-		return nil
-	}
-	var err error
-	Provider, err = api.NewProviderAPIByFile(path)
-	if err != nil {
-		log.Errorf("fail to create ConsumerAPI by default configuration, err is %v", err)
-		return err
-	}
-	return nil
-}
-
-func InitPolarisByYaml(path string) error {
-	if Consumer != nil {
-		return nil
-	}
-	var err error
-	Consumer, err = api.NewConsumerAPIByFile(path)
-	if err != nil {
-		log.Errorf("fail to create ConsumerAPI by default configuration, err is %v", err)
-		return err
-	}
-	return nil
-}
-
-func InitPolaris(address string) error {
-	if Consumer != nil {
-		return nil
-	}
-
-	cfg := api.NewConfiguration()
-	if len(address) > 0 {
-		cfg.GetGlobal().GetServerConnector().SetAddresses(strings.Split(address, ","))
-	}
-
-	var err error
-	Consumer, err = api.NewConsumerAPIByConfig(cfg)
-	if err != nil {
-		log.Errorf("fail to create ConsumerAPI by default configuration, err is %v", err)
-		return err
-	}
-	return nil
 }
