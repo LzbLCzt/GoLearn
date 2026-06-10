@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"git.woa.com/polaris/polaris-go/v2/api"
+	"git.woa.com/polaris/polaris-go/v2/pkg/config"
 	"git.woa.com/polaris/polaris-go/v2/pkg/model"
 )
 
@@ -14,8 +15,14 @@ func TestRuleRouteSdk(t *testing.T) {
 		return
 	}
 
+	defer consumer.Destroy()
+
 	var req *api.GetOneInstanceRequest
 	req = &api.GetOneInstanceRequest{}
+
+	// 设置负载均衡算法
+	req.LbPolicy = config.DefaultLoadBalancerMaglev
+
 	// 设置被调服务信息
 	req.Namespace = "Test"
 	req.Service = "lzb_test"

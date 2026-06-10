@@ -169,9 +169,58 @@ func TestPrac7(t *testing.T) {
 
 	fmt.Printf("m: %v\n", m)
 
-	f := func (source map[string]string) {
+	f := func(source map[string]string) {
 		source["k1"] = "v1"
 	}
 	f(m)
 	fmt.Printf("m: %v\n", m)
+}
+
+type CallStatOne struct {
+	CallCount *bool
+	IpCount   *bool
+}
+
+func TestPrac8(t *testing.T) {
+	arr := []int{1, 2, 3, 4, 5}
+	m := make(map[int]float64, len(arr))
+	for _, idx := range arr {
+		m[idx] = 0
+	}
+	fmt.Printf("m: %v\n", m)
+
+	fmt.Println(float64(5) / float64(10))
+}
+
+// CallStat 调用统计
+type CallStat struct {
+	CallCount int
+	IpCount   int
+}
+
+func (c *CallStat) String() string {
+	return fmt.Sprintf("call count: %d, ip count: %d", c.CallCount, c.IpCount)
+}
+
+func CallCount(refreshStats map[string]*CallStat) {
+	if refreshStats == nil {
+		refreshStats = make(map[string]*CallStat)
+	}
+	refreshStats["test"] = &CallStat{
+		CallCount: 1,
+		IpCount:   1,
+	}
+	return
+}
+
+func CallCount2(x *CallStat) {
+	if x == nil {
+		x = &CallStat{
+			CallCount: 1,
+			IpCount:   1,
+		}
+		return
+	}
+	x.CallCount += 1
+	x.IpCount += 1
 }

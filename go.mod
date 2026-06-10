@@ -7,10 +7,10 @@ require (
 	git.code.oa.com/rainbow/golang-sdk v0.5.5
 	git.code.oa.com/rainbow/proto v1.94.0
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
-	git.woa.com/polaris/polaris-go/v2 v2.6.10
-	git.woa.com/polaris/polaris-server-api v1.0.19
-	git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.2
-	git.woa.com/polaris/polaris-server-api/api/v1/model v1.3.0
+	git.woa.com/polaris/polaris-go/v2 v2.7.1-0.20260511135759-a4ff846ce19f
+	git.woa.com/polaris/polaris-server-api v1.0.24-0.20260520075821-67e5afbb4d9b
+	git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.3-0.20230209033019-2c5536d01209
+	git.woa.com/polaris/polaris-server-api/api/v1/model v1.3.1
 	git.woa.com/polaris/polaris-server-api/api/v1/trpc v1.0.1
 	github.com/codegangsta/inject v0.0.0-20150114235600-33e0aa1cb7c0
 	github.com/emicklei/go-restful v2.16.0+incompatible
@@ -31,7 +31,7 @@ require (
 	google.golang.org/grpc v1.46.0
 	google.golang.org/protobuf v1.28.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
-	gopkg.in/natefinch/lumberjack.v2 v2.0.0
+	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gopkg.in/yaml.v2 v2.4.0
 	gorm.io/driver/sqlite v1.6.0
 	gorm.io/gorm v1.31.1
@@ -43,7 +43,7 @@ require (
 	git.woa.com/polaris/polaris-server-api/api/metric v1.0.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/monitor v1.0.8 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v2/grpc v1.0.0 // indirect
-	git.woa.com/polaris/polaris-server-api/api/v2/model v1.0.3 // indirect
+	git.woa.com/polaris/polaris-server-api/api/v2/model v1.1.0 // indirect
 	git.woa.com/trpc-go/go_reuseport v1.7.0 // indirect
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/andybalholm/brotli v1.0.4 // indirect

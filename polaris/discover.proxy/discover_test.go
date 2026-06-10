@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"git.woa.com/polaris/polaris-go/v2/api"
+	"git.woa.com/polaris/polaris-go/v2/pkg/config"
 	apiV1Model "git.woa.com/polaris/polaris-server-api/api/v1/model"
 )
 
@@ -23,8 +24,11 @@ func TestDiscover(t *testing.T) {
 
 func TestGetOneInstance(t *testing.T) {
 	req := &api.GetOneInstanceRequest{}
-	req.Namespace = "Polaris"
-	req.Service = "polaris.report"
+	req.Namespace = "Test"
+	req.Service = "lzb_test2"
+	req.LbPolicy = config.DefaultLoadBalancerWRR
+	req.HashKey = []byte("")
+	req.Metadata = nil
 
 	resp, err := DefaultBackend.getOneInstance(req)
 	if err != nil {
