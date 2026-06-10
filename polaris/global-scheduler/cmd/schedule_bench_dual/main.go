@@ -44,12 +44,12 @@ func main() {
 	)
 	//flag.StringVar(&addr1, "addr1", "9.141.112.151:8082", "server1 gRPC 地址")
 	flag.StringVar(&addr1, "addr1", "9.134.117.127:8082", "server1 gRPC 地址")
-	flag.StringVar(&addr2, "addr2", "9.134.117.127:8082", "server2 gRPC 地址")
+	flag.StringVar(&addr2, "addr2", "9.134.117.127:8084", "server2 gRPC 地址")
 	flag.StringVar(&namespace, "namespace", "",
 		"北极星命名空间（必填，例如 Test）")
 	flag.StringVar(&service, "service", "",
 		"北极星服务名（必填，例如 lzb_test）")
-	flag.IntVar(&qps, "qps", 1000, "单台 server 的目标 QPS")
+	flag.IntVar(&qps, "qps", 250, "单台 server 的目标 QPS")
 	flag.DurationVar(&duration, "duration", 20*time.Second,
 		"压测持续时间")
 	flag.DurationVar(&dialTimeout, "dial-timeout", 5*time.Second,
