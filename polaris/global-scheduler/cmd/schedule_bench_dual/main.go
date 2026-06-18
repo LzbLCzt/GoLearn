@@ -50,7 +50,7 @@ func main() {
 	flag.StringVar(&service, "service", "",
 		"北极星服务名（必填，例如 lzb_test）")
 	flag.IntVar(&qps, "qps", 250, "单台 server 的目标 QPS")
-	flag.DurationVar(&duration, "duration", 20*time.Second,
+	flag.DurationVar(&duration, "duration", 60*time.Second,
 		"压测持续时间")
 	flag.DurationVar(&dialTimeout, "dial-timeout", 5*time.Second,
 		"gRPC 拨号超时")
