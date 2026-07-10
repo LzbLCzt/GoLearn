@@ -46,8 +46,8 @@ func main() {
 		callTimeout  time.Duration
 		instances    instanceFlags
 	)
-	flag.StringVar(&serverAddr, "addr", "9.134.117.127:8085", "global-scheduler gRPC 服务地址")
-	//flag.StringVar(&serverAddr, "addr", "30.163.16.111:8082", "global-scheduler gRPC 服务地址")
+	//flag.StringVar(&serverAddr, "addr", "9.134.117.127:8085", "global-scheduler gRPC 服务地址")
+	flag.StringVar(&serverAddr, "addr", "30.163.16.111:8082", "global-scheduler gRPC 服务地址")
 	flag.StringVar(&namespace, "namespace", "", "北极星命名空间（必填）")
 	flag.StringVar(&service, "service", "", "北极星服务名（必填）")
 	flag.UintVar(&defaultPort, "default-port", 8080, "实例未显式指定 port 时使用的默认端口")

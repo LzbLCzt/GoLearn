@@ -28,7 +28,8 @@ func main() {
 		dialTimeout time.Duration
 		callTimeout time.Duration
 	)
-	flag.StringVar(&serverAddr, "addr", "9.134.117.127:8084", "global-scheduler gRPC 服务地址")
+	flag.StringVar(&serverAddr, "addr", "9.134.117.127:8085", "global-scheduler gRPC 服务地址")
+	//flag.StringVar(&serverAddr, "addr", "9.141.112.151:8082", "global-scheduler gRPC 服务地址")
 	flag.StringVar(&namespace, "namespace", "", "北极星命名空间（必填）")
 	flag.StringVar(&service, "service", "", "北极星服务名（必填）")
 	flag.StringVar(&revision, "revision", "", "客户端缓存的服务 revision（可选）")

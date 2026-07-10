@@ -20,8 +20,8 @@ func main() {
 		dialTimeout time.Duration
 		callTimeout time.Duration
 	)
-	//flag.StringVar(&serverAddr, "addr", "9.134.117.127:8082", "global-scheduler gRPC 服务地址")
-	flag.StringVar(&serverAddr, "addr", "9.141.112.151:8082", "global-scheduler gRPC 服务地址")
+	flag.StringVar(&serverAddr, "addr", "9.134.117.127:8085", "global-scheduler gRPC 服务地址")
+	//flag.StringVar(&serverAddr, "addr", "9.141.112.151:8082", "global-scheduler gRPC 服务地址")
 	flag.StringVar(&namespace, "namespace", "", "北极星命名空间（必填）")
 	flag.StringVar(&service, "service", "", "北极星服务名（必填）")
 	flag.DurationVar(&dialTimeout, "dial-timeout", 5*time.Second, "gRPC 拨号超时")
@@ -53,7 +53,10 @@ func main() {
 	req := &schedule.ScheduleRequest{
 		Namespace:   namespace,
 		Service:     service,
-		Loadbalance: schedule.LoadBalanceType_GLOBAL_WRR,
+		Loadbalance: schedule.LoadBalanceType_GLOBAL_P2C,
+		Criteria: &schedule.LoadBalanceCriteria{
+			ReplicaCount: 1,
+		},
 	}
 
 	// 发起调用
@@ -70,7 +73,7 @@ func main() {
 	fmt.Printf("Server     : %s\n", serverAddr)
 	fmt.Printf("Namespace  : %s\n", namespace)
 	fmt.Printf("Service    : %s\n", service)
-	fmt.Printf("LoadBalance: %s\n", schedule.LoadBalanceType_GLOBAL_WRR.String())
+	fmt.Printf("LoadBalance: %s\n", schedule.LoadBalanceType_GLOBAL_P2C.String())
 	fmt.Println("========== Schedule 响应 ==========")
 	fmt.Printf("Code: %d\n", resp.GetCode())
 	fmt.Printf("Info: %s\n", resp.GetInfo())

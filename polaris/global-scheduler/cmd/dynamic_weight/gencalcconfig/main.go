@@ -29,7 +29,7 @@ var defaultMetrics = []*schedule.MetricScorerItem{
 	{
 		Metric: "kv_cache_usage_perc",
 		Weight: 0.2,
-		Mode:   schedule.MetricMode_METRIC_MODE_HIGHER_IS_BETTER,
+		Mode:   schedule.MetricMode_METRIC_MODE_LOWER_IS_BETTER,
 	},
 	{
 		Metric: "num_requests_running",
@@ -39,7 +39,7 @@ var defaultMetrics = []*schedule.MetricScorerItem{
 	{
 		Metric: "num_requests_waiting",
 		Weight: 0.5,
-		Mode:   schedule.MetricMode_METRIC_MODE_HIGHER_IS_BETTER,
+		Mode:   schedule.MetricMode_METRIC_MODE_LOWER_IS_BETTER,
 	},
 }
 
@@ -47,11 +47,14 @@ func main() {
 	cfg := &schedule.CalculateConfig{
 		Scorers: []*schedule.ScorerConfig{
 			{
-				Weight:  1,
-				Metrics: defaultMetrics,
+				Weight:        1,
+				Metrics:       defaultMetrics,
+			AggregateMode: schedule.AggregateMode_AGGREGATE_MODE_NORMALIZE_THEN_WEIGHT,
 			},
 		},
 	}
+
+	//cfg := &schedule.CalculateConfig{}
 
 	// UseEnumNumbers: 让 mode 输出为数字 2，与服务端协议一致
 	// EmitUnpopulated: false, 默认值字段不输出，保持 JSON 简洁

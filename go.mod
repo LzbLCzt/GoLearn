@@ -8,7 +8,7 @@ require (
 	git.code.oa.com/rainbow/proto v1.94.0
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
 	git.woa.com/polaris/polaris-go/v2 v2.7.1-0.20260511135759-a4ff846ce19f
-	git.woa.com/polaris/polaris-server-api v1.0.24-0.20260602023025-d828342940fd
+	git.woa.com/polaris/polaris-server-api v1.0.27
 	git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.3-0.20230209033019-2c5536d01209
 	git.woa.com/polaris/polaris-server-api/api/v1/model v1.3.1
 	git.woa.com/polaris/polaris-server-api/api/v1/trpc v1.0.1
