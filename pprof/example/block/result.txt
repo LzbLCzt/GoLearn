@@ -1,0 +1,136 @@
+[run.sh] building...
+[run.sh] starting demo, log -> ./blockdemo.log
+[run.sh] waiting for pprof endpoint ...
+[run.sh] warming up 15s to accumulate block samples ...
+[run.sh] fetching block profile -> ./block.pprof
+-rw-r--r--@ 1 zhengbangli  staff   2.0K Jul 10 13:08 ./block.pprof
+
+[run.sh] pprof top -cum (block):
+File: blockdemo
+Type: delay
+Time: 2026-07-10 13:08:15 CST
+Showing nodes accounting for 1170.59s, 100% of 1170.60s total
+Dropped 30 nodes (cum <= 5.85s)
+      flat  flat%   sum%        cum   cum%
+         0     0%     0%    720.38s 61.54%  main.consumer
+         0     0%     0%    720.38s 61.54%  main.runWorkload.gowrap1
+   720.38s 61.54% 61.54%    720.38s 61.54%  runtime.chanrecv2
+         0     0% 61.54%    300.57s 25.68%  main.barrierWorker
+         0     0% 61.54%    300.57s 25.68%  main.runWorkload.gowrap4
+   300.57s 25.68% 87.22%    300.57s 25.68%  runtime.chanrecv1
+   135.41s 11.57% 98.78%    135.41s 11.57%  runtime.selectgo
+         0     0% 98.78%    135.41s 11.57%  main.fanInWorker
+         0     0% 98.78%    135.41s 11.57%  main.runWorkload.gowrap3
+         0     0% 98.78%     14.23s  1.22%  main.main
+         0     0% 98.78%     14.23s  1.22%  main.runWorkload
+         0     0% 98.78%     14.23s  1.22%  runtime.main
+    14.23s  1.22%   100%     14.23s  1.22%  sync.(*WaitGroup).Wait
+
+[run.sh] pprof list runWorkload:
+Total: 1170.60s
+ROUTINE ======================== main.barrierWorker in /Users/zhengbangli/code/GoLearn/pprof/example/block/main.go
+         0    300.57s (flat, cum) 25.68% of Total
+         .          .     53:func barrierWorker(id int, done <-chan struct{}, wg *sync.WaitGroup) {
+         .          .     54:	defer wg.Done()
+         .    300.57s     55:	<-done
+         .          .     56:	_ = id
+         .          .     57:}
+         .          .     58:
+         .          .     59:func runWorkload() {
+         .          .     60:	// ---------- 场景 1：慢生产者 + 多消费者 ----------
+ROUTINE ======================== main.consumer in /Users/zhengbangli/code/GoLearn/pprof/example/block/main.go
+         0    720.38s (flat, cum) 61.54% of Total
+         .          .     33:func consumer(id int, ch <-chan int, wg *sync.WaitGroup) {
+         .          .     34:	defer wg.Done()
+         .    720.38s     35:	for v := range ch {
+         .          .     36:		_ = v
+         .          .     37:		_ = id
+         .          .     38:	}
+         .          .     39:}
+         .          .     40:
+ROUTINE ======================== main.fanInWorker in /Users/zhengbangli/code/GoLearn/pprof/example/block/main.go
+         0    135.41s (flat, cum) 11.57% of Total
+         .          .     42:func fanInWorker(id int, a, b, c <-chan int, wg *sync.WaitGroup) {
+         .          .     43:	defer wg.Done()
+         .    135.41s     44:	select {
+         .          .     45:	case <-a:
+         .          .     46:	case <-b:
+         .          .     47:	case <-c:
+         .          .     48:	}
+         .          .     49:	_ = id
+ROUTINE ======================== main.runWorkload in /Users/zhengbangli/code/GoLearn/pprof/example/block/main.go
+         0     14.23s (flat, cum)  1.22% of Total
+         .          .     59:func runWorkload() {
+         .          .     60:	// ---------- 场景 1：慢生产者 + 多消费者 ----------
+         .          .     61:	ch := make(chan int) // 无缓冲
+         .          .     62:	var wg1 sync.WaitGroup
+         .          .     63:	consumerN := 50
+         .          .     64:	for i := 0; i < consumerN; i++ {
+         .          .     65:		wg1.Add(1)
+         .          .     66:		go consumer(i, ch, &wg1)
+         .          .     67:	}
+         .          .     68:	go slowProducer(ch, 20)
+         .          .     69:
+         .          .     70:	// ---------- 场景 2：fan-in select 多路等待 ----------
+         .          .     71:	a := make(chan int)
+         .          .     72:	b := make(chan int)
+         .          .     73:	c := make(chan int)
+         .          .     74:	var wg2 sync.WaitGroup
+         .          .     75:	fanN := 30
+         .          .     76:	for i := 0; i < fanN; i++ {
+         .          .     77:		wg2.Add(1)
+         .          .     78:		go fanInWorker(i, a, b, c, &wg2)
+         .          .     79:	}
+         .          .     80:	// 300ms 后才随便往一个 channel 发信号，让所有 worker 都阻塞一段时间
+         .          .     81:	go func() {
+         .          .     82:		time.Sleep(300 * time.Millisecond)
+         .          .     83:		for i := 0; i < fanN; i++ {
+         .          .     84:			a <- i
+         .          .     85:		}
+         .          .     86:	}()
+         .          .     87:
+         .          .     88:	// ---------- 场景 3：广播 barrier ----------
+         .          .     89:	done := make(chan struct{})
+         .          .     90:	var wg3 sync.WaitGroup
+         .          .     91:	barrierN := 40
+         .          .     92:	for i := 0; i < barrierN; i++ {
+         .          .     93:		wg3.Add(1)
+         .          .     94:		go barrierWorker(i, done, &wg3)
+         .          .     95:	}
+         .          .     96:	// 500ms 后广播释放
+         .          .     97:	go func() {
+         .          .     98:		time.Sleep(500 * time.Millisecond)
+         .          .     99:		close(done)
+         .          .    100:	}()
+         .          .    101:
+         .     14.23s    102:	wg1.Wait()
+         .          .    103:	wg2.Wait()
+         .          .    104:	wg3.Wait()
+         .          .    105:}
+         .          .    106:
+         .          .    107:func main() {
+ROUTINE ======================== main.runWorkload.gowrap1 in /Users/zhengbangli/code/GoLearn/pprof/example/block/main.go
+         0    720.38s (flat, cum) 61.54% of Total
+         .    720.38s     66:		go consumer(i, ch, &wg1)
+         .          .     67:	}
+         .          .     68:	go slowProducer(ch, 20)
+         .          .     69:
+         .          .     70:	// ---------- 场景 2：fan-in select 多路等待 ----------
+         .          .     71:	a := make(chan int)
+ROUTINE ======================== main.runWorkload.gowrap3 in /Users/zhengbangli/code/GoLearn/pprof/example/block/main.go
+         0    135.41s (flat, cum) 11.57% of Total
+         .    135.41s     78:		go fanInWorker(i, a, b, c, &wg2)
+         .          .     79:	}
+         .          .     80:	// 300ms 后才随便往一个 channel 发信号，让所有 worker 都阻塞一段时间
+         .          .     81:	go func() {
+         .          .     82:		time.Sleep(300 * time.Millisecond)
+         .          .     83:		for i := 0; i < fanN; i++ {
+ROUTINE ======================== main.runWorkload.gowrap4 in /Users/zhengbangli/code/GoLearn/pprof/example/block/main.go
+         0    300.57s (flat, cum) 25.68% of Total
+         .    300.57s     94:		go barrierWorker(i, done, &wg3)
+         .          .     95:	}
+         .          .     96:	// 500ms 后广播释放
+         .          .     97:	go func() {
+         .          .     98:		time.Sleep(500 * time.Millisecond)
+         .          .     99:		close(done)
+[run.sh] cleaning up...
