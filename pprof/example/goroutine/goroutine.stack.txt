@@ -1,0 +1,1869 @@
+goroutine 300 [running]:
+runtime/pprof.writeGoroutineStacks({0x10500b488, 0x140001d0000})
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/runtime/pprof/pprof.go:764 +0x6c
+runtime/pprof.writeGoroutine({0x10500b488?, 0x140001d0000?}, 0x140001c4848?)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/runtime/pprof/pprof.go:753 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x105203550?, {0x10500b488?, 0x140001d0000?}, 0xc?)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/runtime/pprof/pprof.go:377 +0x14c
+net/http/pprof.handler.ServeHTTP({0x1400001a131, 0x9}, {0x10500d738, 0x140001d0000}, 0x140001ca000)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/pprof/pprof.go:272 +0x444
+net/http/pprof.Index({0x10500d738, 0x140001d0000}, 0x140001ca000?)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/pprof/pprof.go:389 +0xc8
+net/http.HandlerFunc.ServeHTTP(0x10520f9a0?, {0x10500d738?, 0x140001d0000?}, 0x104e79b44?)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:2294 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10500d738, 0x140001d0000}, 0x140001ca000)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:2822 +0x1b4
+net/http.serverHandler.ServeHTTP({0x140001860c0?}, {0x10500d738?, 0x140001d0000?}, 0x1?)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:3301 +0xbc
+net/http.(*conn).serve(0x140001be000, {0x10500db90, 0x140001159b0})
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:2102 +0x52c
+created by net/http.(*Server).Serve in goroutine 35
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:3454 +0x3d8
+
+goroutine 1 [chan receive]:
+main.main()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:82 +0x15c
+
+goroutine 35 [IO wait]:
+internal/poll.runtime_pollWait(0x105668ec8, 0x72)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x1400017e100?, 0x104caee0c?, 0x0)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0x1400017e100)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/internal/poll/fd_unix.go:620 +0x24c
+net.(*netFD).accept(0x1400017e100)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/fd_unix.go:172 +0x28
+net.(*TCPListener).accept(0x14000128400)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/tcpsock_posix.go:159 +0x24
+net.(*TCPListener).Accept(0x14000128400)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/tcpsock.go:380 +0x2c
+net/http.(*Server).Serve(0x14000280000, {0x10500d828, 0x14000128400})
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:3424 +0x290
+net/http.(*Server).ListenAndServe(0x14000280000)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:3350 +0x84
+net/http.ListenAndServe(...)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:3659
+main.main.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:73 +0x94
+created by main.main in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:71 +0x30
+
+goroutine 40 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 41 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 42 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 43 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 44 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 45 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 46 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 47 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 48 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 49 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 20 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 21 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 22 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 23 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 24 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 25 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 2 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 3 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 4 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 5 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 65 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 66 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 67 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 68 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 69 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 70 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 71 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 72 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 73 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 74 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 75 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 76 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 77 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 78 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 79 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 80 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 81 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 82 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 83 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 84 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 85 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 86 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 87 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 88 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 89 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 90 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 91 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 92 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 93 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 94 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 95 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 96 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 97 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 98 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 99 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 100 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 101 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 102 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 103 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 104 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 50 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 51 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 52 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 53 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 54 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 55 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 56 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 57 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 58 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 59 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 6 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 7 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 8 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 9 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 10 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 11 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 12 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 13 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 14 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 15 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 60 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 61 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 62 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 63 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 64 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 113 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 114 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 115 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 116 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 117 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 118 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 119 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 120 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 121 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 122 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 123 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 124 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 125 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 126 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 127 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 16 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 129 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 130 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 131 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 132 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 133 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 134 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 135 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 136 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 137 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 138 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 139 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 140 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 141 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 142 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 143 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 144 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 145 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 146 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 147 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 148 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 149 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 150 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 151 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 152 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 153 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 154 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 155 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 156 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 157 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 161 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 162 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 163 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 164 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 165 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 166 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 167 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 168 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 169 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 170 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 105 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 106 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 107 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 108 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 109 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 110 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 111 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 112 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 177 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 178 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 158 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 159 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 160 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 193 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 194 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 195 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 196 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 197 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 198 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 199 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 128 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 209 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 210 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 211 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 212 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 213 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 214 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 215 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 216 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 217 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 171 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 172 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 173 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 174 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 175 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 176 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 225 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 226 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 227 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 228 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 229 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 230 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 231 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 232 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 233 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 234 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 235 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 236 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 237 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 238 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 239 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 240 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 241 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 242 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 243 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 244 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 245 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 246 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 247 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 248 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 26 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 27 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 28 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 29 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 30 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 31 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 32 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 257 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 258 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 259 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 260 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 261 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 262 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 263 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 264 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 265 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 266 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 267 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 268 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 269 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 218 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 219 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 220 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 221 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 222 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 223 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 224 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 273 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 274 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 275 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 276 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 277 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 278 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 279 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 280 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 281 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 282 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 283 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 284 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 285 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 200 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 201 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 202 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 203 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 204 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 205 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 206 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 207 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 208 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 289 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 290 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 291 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 292 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 293 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 294 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 295 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 296 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 297 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 298 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 299 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 179 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 180 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 181 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 182 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 183 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 184 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 185 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 186 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 187 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 188 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 270 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 271 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 272 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 305 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 306 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 307 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 308 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 309 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 310 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 311 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 312 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 313 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 314 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 315 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 316 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 317 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 318 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 319 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 320 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 321 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 286 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 287 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 288 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 337 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 338 [chan send]:
+main.leakOnUnbufferedSend.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:32 +0x28
+created by main.leakOnUnbufferedSend in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:30 +0x6c
+
+goroutine 339 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 340 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 341 [chan receive]:
+main.leakOnRecvNoClose.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:41 +0x28
+created by main.leakOnRecvNoClose in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:39 +0x6c
+
+goroutine 342 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 343 [chan receive]:
+main.leakOnForgottenTimer.func1()
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:52 +0x34
+created by main.leakOnForgottenTimer in goroutine 1
+	/Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go:50 +0x24
+
+goroutine 301 [IO wait]:
+internal/poll.runtime_pollWait(0x105668db0, 0x72)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x14000188100?, 0x140001860d1?, 0x0)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x14000188100, {0x140001860d1, 0x1, 0x1})
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/internal/poll/fd_unix.go:165 +0x1fc
+net.(*netFD).Read(0x14000188100, {0x140001860d1?, 0x0?, 0x0?})
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/fd_posix.go:55 +0x28
+net.(*conn).Read(0x14000062008, {0x140001860d1?, 0x0?, 0x0?})
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/net.go:194 +0x34
+net/http.(*connReader).backgroundRead(0x140001860c0)
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:690 +0x40
+created by net/http.(*connReader).startBackgroundRead in goroutine 300
+	/Users/zhengbangli/go/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.0.darwin-arm64/src/net/http/server.go:686 +0xc4

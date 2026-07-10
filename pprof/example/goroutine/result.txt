@@ -1,0 +1,126 @@
+
+[run.sh] pprof top -cum (goroutine):
+File: goroutinedemo
+Type: goroutine
+Time: 2026-07-10 14:27:24 CST
+Showing nodes accounting for 303, 99.67% of 304 total
+Showing top 15 nodes out of 38
+      flat  flat%   sum%        cum   cum%
+       303 99.67% 99.67%        303 99.67%  runtime.gopark
+         0     0% 99.67%        151 49.67%  runtime.chanrecv
+         0     0% 99.67%        150 49.34%  main.leakOnUnbufferedSend.func1
+         0     0% 99.67%        150 49.34%  runtime.chanrecv1
+         0     0% 99.67%        150 49.34%  runtime.chansend
+         0     0% 99.67%        150 49.34%  runtime.chansend1
+         0     0% 99.67%         90 29.61%  main.leakOnRecvNoClose.func1
+         0     0% 99.67%         60 19.74%  main.leakOnForgottenTimer.func1
+         0     0% 99.67%          2  0.66%  internal/poll.(*pollDesc).wait
+         0     0% 99.67%          2  0.66%  internal/poll.(*pollDesc).waitRead (inline)
+         0     0% 99.67%          2  0.66%  internal/poll.runtime_pollWait
+         0     0% 99.67%          2  0.66%  runtime.netpollblock
+         0     0% 99.67%          1  0.33%  internal/poll.(*FD).Accept
+         0     0% 99.67%          1  0.33%  internal/poll.(*FD).Read
+         0     0% 99.67%          1  0.33%  main.main
+
+[run.sh] pprof traces (each unique goroutine stack + count):
+File: goroutinedemo
+Type: goroutine
+Time: 2026-07-10 14:27:24 CST
+-----------+-------------------------------------------------------
+       150   runtime.gopark
+             runtime.chansend
+             runtime.chansend1
+             main.leakOnUnbufferedSend.func1
+-----------+-------------------------------------------------------
+        90   runtime.gopark
+             runtime.chanrecv
+             runtime.chanrecv1
+             main.leakOnRecvNoClose.func1
+-----------+-------------------------------------------------------
+        60   runtime.gopark
+             runtime.chanrecv
+             runtime.chanrecv1
+             main.leakOnForgottenTimer.func1
+-----------+-------------------------------------------------------
+         1   runtime.goroutineProfileWithLabels
+             runtime.pprof_goroutineProfileWithLabels
+             runtime/pprof.writeRuntimeProfile
+             runtime/pprof.writeGoroutine
+             runtime/pprof.(*Profile).WriteTo
+             net/http/pprof.handler.ServeHTTP
+             net/http/pprof.Index
+             net/http.HandlerFunc.ServeHTTP
+             net/http.(*ServeMux).ServeHTTP
+             net/http.serverHandler.ServeHTTP
+             net/http.(*conn).serve
+-----------+-------------------------------------------------------
+         1   runtime.gopark
+             runtime.chanrecv
+             runtime.chanrecv2
+             main.main
+             runtime.main
+-----------+-------------------------------------------------------
+         1   runtime.gopark
+             runtime.netpollblock
+             internal/poll.runtime_pollWait
+             internal/poll.(*pollDesc).wait
+             internal/poll.(*pollDesc).waitRead (inline)
+             internal/poll.(*FD).Read
+             net.(*netFD).Read
+             net.(*conn).Read
+             net/http.(*connReader).backgroundRead
+-----------+-------------------------------------------------------
+         1   runtime.gopark
+             runtime.netpollblock
+             internal/poll.runtime_pollWait
+             internal/poll.(*pollDesc).wait
+             internal/poll.(*pollDesc).waitRead (inline)
+             internal/poll.(*FD).Accept
+             net.(*netFD).accept
+             net.(*TCPListener).accept
+             net.(*TCPListener).Accept
+             net/http.(*Server).Serve
+             net/http.(*Server).ListenAndServe
+             net/http.ListenAndServe (inline)
+             main.main.func1
+-----------+-------------------------------------------------------
+
+[run.sh] pprof list leak functions:
+Total: 304
+ROUTINE ======================== main.leakOnForgottenTimer.func1 in /Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go
+         0         60 (flat, cum) 19.74% of Total
+         .          .     50:	go func() {
+         .          .     51:		// 用一个远大于程序生命周期的超时，模拟"实际上等不到"的场景
+         .         60     52:		<-time.After(1 * time.Hour)
+         .          .     53:	}()
+         .          .     54:}
+         .          .     55:
+         .          .     56:func spawnLeakers() {
+         .          .     57:	// 每种泄漏各产生一批，制造出可观的样本便于 pprof 定位
+ROUTINE ======================== main.leakOnRecvNoClose.func1 in /Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go
+         0         90 (flat, cum) 29.61% of Total
+         .          .     39:	go func() {
+         .          .     40:		// 生产者从未 send 也未 close，这里永远阻塞
+         .         90     41:		v := <-ch
+         .          .     42:		_ = v
+         .          .     43:	}()
+         .          .     44:}
+         .          .     45:
+         .          .     46:// leakOnForgottenTimer 每次调用产生 1 个泄漏 goroutine，卡在 time.After
+ROUTINE ======================== main.leakOnUnbufferedSend.func1 in /Users/zhengbangli/code/GoLearn/pprof/example/goroutine/main.go
+         0        150 (flat, cum) 49.34% of Total
+         .          .     30:	go func() {
+         .          .     31:		// 永远发不出去
+         .        150     32:		ch <- 42
+         .          .     33:	}()
+         .          .     34:}
+         .          .     35:
+         .          .     36:// leakOnRecvNoClose 每次调用产生 1 个泄漏 goroutine，卡在 recv
+         .          .     37:func leakOnRecvNoClose() {
+
+[run.sh] 泄漏 goroutine 分组统计（来自 debug=2 全栈）：
+ 150 chan send | main.leakOnUnbufferedSend.func1
+  90 chan receive | main.leakOnRecvNoClose.func1
+  60 chan receive | main.leakOnForgottenTimer.func1
+   1 chan receive | main.main
+   1 IO wait | main.main.func1
