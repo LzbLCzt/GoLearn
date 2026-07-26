@@ -2,8 +2,6 @@ package nearby
 
 import (
 	"fmt"
-	"os"
-	"path/filepath"
 	"sort"
 	"testing"
 	"time"
@@ -49,10 +47,6 @@ type instanceStat struct {
 
 // TestNearbyRouter_AllHealthy_CallerInShenzhen
 func TestNearbyRouter_AllHealthy_CallerInShenzhen(t *testing.T) {
-	// 屏蔽 SDK 日志，避免在项目目录下生成 polaris/log/
-	_ = api.SetLoggersDir(filepath.Join(os.TempDir(), "polaris-go-log"))
-	_ = api.SetLoggersLevel(api.NoneLog)
-
 	// 通过内联 yaml 加载 SDK 配置（覆盖 nearby 路由默认值）
 	cfg, err := config.LoadConfiguration([]byte(nearbyRouterYaml))
 	if err != nil {

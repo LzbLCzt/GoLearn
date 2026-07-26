@@ -37,6 +37,8 @@ require (
 	gorm.io/gorm v1.31.1
 )
 
+replace git.woa.com/polaris/polaris-go/v2 => /Users/zhengbangli/code/polaris-go
+
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	git.woa.com/jce/jce v1.2.0 // indirect
