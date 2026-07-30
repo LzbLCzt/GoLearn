@@ -8,7 +8,6 @@ import (
 
 	"git.woa.com/polaris/polaris-go/v2/api"
 	"git.woa.com/polaris/polaris-go/v2/pkg/config"
-	"git.woa.com/polaris/polaris-go/v2/pkg/model"
 )
 
 const (
@@ -18,7 +17,7 @@ const (
 	testSrcNamespace = "Test"
 	testSrcService   = "lzb_rulebase_router" // 主调服务
 
-	requestTimes = 10000
+	requestTimes = 100000
 )
 
 // ruleRouterYaml SDK 规则路由配置。
@@ -67,13 +66,13 @@ func TestRuleRouter_CallerLzbRulebaseRouter(t *testing.T) {
 		req.Namespace = testDestNamespace
 		req.Service = testDestService
 		// 设置主调信息，规则路由依赖 SourceService 做匹配
-		req.SourceService = &model.ServiceInfo{
-			Namespace: testSrcNamespace,
-			Service:   testSrcService,
-			//Metadata: map[string]string{
-			//	"k1": "v1",
-			//},
-		}
+		//req.SourceService = &model.ServiceInfo{
+		//	Namespace: testSrcNamespace,
+		//	Service:   testSrcService,
+		//	Metadata: map[string]string{
+		//		"k1": "v1",
+		//	},
+		//}
 		rsp, err := consumer.GetOneInstance(req)
 		if err != nil {
 			t.Fatalf("fail to get one instance at #%d, err: %v", i, err)

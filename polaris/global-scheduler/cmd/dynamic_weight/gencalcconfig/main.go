@@ -26,11 +26,11 @@ import (
 // defaultMetrics 默认参与评分的指标列表，权重均为 1，模式均为 HIGHER_IS_BETTER。
 // 如需调整指标，直接改这里即可，无需关心 JSON 字段名/枚举数字。
 var defaultMetrics = []*schedule.MetricScorerItem{
-	{
-		Metric: "kv_cache_usage_perc",
-		Weight: 0.2,
-		Mode:   schedule.MetricMode_METRIC_MODE_LOWER_IS_BETTER,
-	},
+	//{
+	//	Metric: "kv_cache_usage_perc",
+	//	Weight: 0.2,
+	//	Mode:   schedule.MetricMode_METRIC_MODE_LOWER_IS_BETTER,
+	//},
 	{
 		Metric: "num_requests_running",
 		Weight: 0.3,
@@ -38,7 +38,7 @@ var defaultMetrics = []*schedule.MetricScorerItem{
 	},
 	{
 		Metric: "num_requests_waiting",
-		Weight: 0.5,
+		Weight: 0.7,
 		Mode:   schedule.MetricMode_METRIC_MODE_LOWER_IS_BETTER,
 	},
 }
@@ -49,8 +49,11 @@ func main() {
 			{
 				Weight:        1,
 				Metrics:       defaultMetrics,
-			AggregateMode: schedule.AggregateMode_AGGREGATE_MODE_NORMALIZE_THEN_WEIGHT,
+				AggregateMode: schedule.AggregateMode_AGGREGATE_MODE_WEIGHT_THEN_NORMALIZE,
 			},
+		},
+		Fallback: &schedule.FallbackStrategy{
+			Type: schedule.FallbackType_FALLBACK_STATIC_WEIGHT,
 		},
 	}
 
