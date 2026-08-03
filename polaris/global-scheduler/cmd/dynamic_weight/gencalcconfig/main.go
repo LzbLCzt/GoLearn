@@ -53,7 +53,7 @@ func main() {
 			},
 		},
 		Fallback: &schedule.FallbackStrategy{
-			Type: schedule.FallbackType_FALLBACK_STATIC_WEIGHT,
+			Type: schedule.FallbackType_FALLBACK_AVG_SCORE,
 		},
 	}
 
