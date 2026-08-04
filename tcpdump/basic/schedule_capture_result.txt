@@ -1,0 +1,26 @@
+11:11:27.185462 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [S], seq 2092668383, win 65535, options [mss 1460,nop,wscale 6,nop,nop,TS val 2158919765 ecr 0,sackOK,eol], length 0
+11:11:27.193759 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [S.], seq 3862639711, ack 2092668384, win 65160, options [mss 1382,sackOK,TS val 975212821 ecr 2158919765,nop,wscale 7], length 0
+11:11:27.193906 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [.], ack 1, win 2055, options [nop,nop,TS val 2158919774 ecr 975212821], length 0
+11:11:27.194151 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [P.], seq 1:34, ack 1, win 2055, options [nop,nop,TS val 2158919774 ecr 975212821], length 33
+11:11:27.202783 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [P.], seq 1:16, ack 1, win 510, options [nop,nop,TS val 975212830 ecr 2158919774], length 15
+11:11:27.202784 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [.], ack 34, win 510, options [nop,nop,TS val 975212831 ecr 2158919774], length 0
+11:11:27.202785 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [P.], seq 16:25, ack 34, win 510, options [nop,nop,TS val 975212831 ecr 2158919774], length 9
+11:11:27.202902 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [.], ack 16, win 2055, options [nop,nop,TS val 2158919783 ecr 975212830], length 0
+11:11:27.202964 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [.], ack 25, win 2055, options [nop,nop,TS val 2158919783 ecr 975212831], length 0
+11:11:27.203209 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [P.], seq 34:43, ack 25, win 2055, options [nop,nop,TS val 2158919783 ecr 975212831], length 9
+11:11:27.203272 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [P.], seq 43:154, ack 25, win 2055, options [nop,nop,TS val 2158919783 ecr 975212831], length 111
+11:11:27.203805 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [P.], seq 154:329, ack 25, win 2055, options [nop,nop,TS val 2158919783 ecr 975212831], length 175
+11:11:27.211064 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [.], ack 43, win 510, options [nop,nop,TS val 975212839 ecr 2158919783], length 0
+11:11:27.211064 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [.], ack 154, win 510, options [nop,nop,TS val 975212839 ecr 2158919783], length 0
+11:11:27.212021 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [.], ack 329, win 509, options [nop,nop,TS val 975212840 ecr 2158919783], length 0
+11:11:27.212022 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [P.], seq 25:55, ack 329, win 509, options [nop,nop,TS val 975212840 ecr 2158919783], length 30
+11:11:27.212095 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [.], ack 55, win 2055, options [nop,nop,TS val 2158919791 ecr 975212840], length 0
+11:11:27.212217 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [P.], seq 329:346, ack 55, win 2055, options [nop,nop,TS val 2158919792 ecr 975212840], length 17
+11:11:27.212645 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [P.], seq 55:194, ack 329, win 509, options [nop,nop,TS val 975212840 ecr 2158919783], length 139
+11:11:27.212715 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [.], ack 194, win 2053, options [nop,nop,TS val 2158919792 ecr 975212840], length 0
+11:11:27.212933 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [P.], seq 346:376, ack 194, win 2053, options [nop,nop,TS val 2158919792 ecr 975212840], length 30
+11:11:27.214208 IP 30.26.152.44.54901 > 9.134.117.127.8086: Flags [F.], seq 376, ack 194, win 2053, options [nop,nop,TS val 2158919794 ecr 975212840], length 0
+11:11:27.221638 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [.], ack 346, win 509, options [nop,nop,TS val 975212849 ecr 2158919792], length 0
+11:11:27.221638 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [.], ack 376, win 509, options [nop,nop,TS val 975212849 ecr 2158919792], length 0
+11:11:27.223408 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [P.], seq 194:211, ack 376, win 509, options [nop,nop,TS val 975212849 ecr 2158919792], length 17
+11:11:27.223408 IP 9.134.117.127.8086 > 30.26.152.44.54901: Flags [F.], seq 211, ack 377, win 509, options [nop,nop,TS val 975212851 ecr 2158919794], length 0

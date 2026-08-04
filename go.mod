@@ -9,6 +9,7 @@ require (
 	git.code.oa.com/trpc-go/trpc-go v0.8.1
 	git.woa.com/polaris/polaris-go/v2 v2.7.0
 	git.woa.com/polaris/polaris-server-api v1.0.27
+	git.woa.com/polaris/polaris-server-api/api/monitor v1.0.9
 	git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.3-0.20230209033019-2c5536d01209
 	git.woa.com/polaris/polaris-server-api/api/v1/model v1.3.1
 	git.woa.com/polaris/polaris-server-api/api/v1/trpc v1.0.1
@@ -43,7 +44,6 @@ require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	git.woa.com/jce/jce v1.2.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/metric v1.0.0 // indirect
-	git.woa.com/polaris/polaris-server-api/api/monitor v1.0.8 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v2/grpc v1.0.0 // indirect
 	git.woa.com/polaris/polaris-server-api/api/v2/model v1.1.0 // indirect
 	git.woa.com/trpc-go/go_reuseport v1.7.0 // indirect

@@ -75,6 +75,7 @@ func TestNearbyRouter_AllHealthy_CallerInShenzhen(t *testing.T) {
 		req.Namespace = testNamespace
 		req.Service = testService
 		rsp, err := consumer.GetOneInstance(req)
+
 		if err != nil {
 			t.Fatalf("fail to get one instance at #%d, err: %v", i, err)
 		}
