@@ -1,4 +1,4 @@
-2026/08/06 19:50:16 start CollectScheduleRequestStat, addr=9.134.117.127:8086 namespace=Test service=lzb_test2 count=58
+2026/08/06 18:40:12 start CollectScheduleRequestStat, addr=9.134.117.127:8086 namespace=Test service=lzb_test3 count=58
 [resp 0] code=200000 info=receive success
 [resp 1] code=200000 info=receive success
 [resp 2] code=200000 info=receive success
@@ -57,4 +57,4 @@
 [resp 55] code=200000 info=receive success
 [resp 56] code=200000 info=receive success
 [resp 57] code=200000 info=receive success
-2026/08/06 19:50:17 CollectScheduleRequestStat done, total response=58
+2026/08/06 18:40:13 CollectScheduleRequestStat done, total response=58

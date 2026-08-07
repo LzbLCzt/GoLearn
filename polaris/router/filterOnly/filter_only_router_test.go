@@ -55,4 +55,14 @@ func TestFilterOnlyRouter(t *testing.T) {
 	t.Logf("命中实例: host=%s, port=%d, metadata=%v, region=%s, zone=%s, campus=%s",
 		ins.GetHost(), ins.GetPort(), ins.GetMetadata(),
 		ins.GetRegion(), ins.GetZone(), ins.GetCampus())
+
+	// 测试getOneInstances接口是否会执行全死全活逻辑，答案是会的
+	reqq := &api.GetInstancesRequest{}
+	reqq.Namespace = testNamespace
+	reqq.Service = testService
+	rsp, err = consumer.GetInstances(reqq)
+	if err != nil {
+		t.Fatalf("fail to get instances, err: %v", err)
+	}
+	t.Logf("len of instances: %d", len(rsp.Instances))
 }

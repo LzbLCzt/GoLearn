@@ -1,0 +1,2 @@
+2026-08-06 16:22:52.459854Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Polaris", service: "polaris.discover"}
+2026-08-06 16:22:57.460088Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Test", service: "lzb_nearby_router"}

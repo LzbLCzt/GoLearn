@@ -1,0 +1,16 @@
+2026-08-05 10:34:30.741073Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Polaris", service: "polaris.discover"}
+2026-08-05 10:34:31.848436Z	info	detect	errorcount/err_count.go:178	closeToOpen errorCount: instance(id=70665e398fe5d1f21f50d1176d47ccb40d871cea, address=30.160.193.207:8081) match condition for failCount=1(threshold=1)
+2026-08-05 10:34:32.557363Z	info	detect	errorcount/err_count.go:178	closeToOpen errorCount: instance(id=af2ba5fb8cfee5986adf82d7b70f83a8a202da4d, address=9.136.102.110:8081) match condition for failCount=1(threshold=1)
+2026-08-05 10:34:32.649954Z	info	detect	errorcount/err_count.go:178	closeToOpen errorCount: instance(id=293e4dd87076f1bdaee4611e97caf8947e003cbc, address=11.143.46.238:8081) match condition for failCount=1(threshold=1)
+2026-08-05 10:34:32.650061Z	info	detect	errorcount/err_count.go:178	closeToOpen errorCount: instance(id=293e4dd87076f1bdaee4611e97caf8947e003cbc, address=11.143.46.238:8081) match condition for failCount=1(threshold=1)
+2026-08-05 10:34:32.650079Z	warn	detect	circuitbreaker/circuitbreaker.go:79	errorCount circuitbreaker: close to open, instance: Id: 293e4dd87076f1bdaee4611e97caf8947e003cbc, Namespace: Polaris, Service: polaris.discover, Host: 11.143.46.238, Port: 8081
+2026-08-05 10:34:32.650184Z	info	detect	cbcheck/realtime.go:79	success to realtime circuitBreak check for {namespace: "Polaris", service: "polaris.discover"}, result is {Service: polaris.discover, Namespace: Polaris, Properties: {ID: 293e4dd87076f1bdaee4611e97caf8947e003cbc, Properties: CircuitBreakerStatus:{circuitBreaker:errorCount, status:1, startTime:2026-08-05 10:34:32.645521 +0800 CST m=+1.929565792}}}
+2026-08-05 10:34:32.742034Z	info	detect	errorcount/err_count.go:178	closeToOpen errorCount: instance(id=70665e398fe5d1f21f50d1176d47ccb40d871cea, address=30.160.193.207:8081) match condition for failCount=1(threshold=1)
+2026-08-05 10:34:32.742094Z	warn	detect	circuitbreaker/circuitbreaker.go:79	errorCount circuitbreaker: close to open, instance: Id: 70665e398fe5d1f21f50d1176d47ccb40d871cea, Namespace: Polaris, Service: polaris.discover, Host: 30.160.193.207, Port: 8081
+2026-08-05 10:34:32.742510Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Polaris", service: "polaris.monitor"}
+2026-08-05 10:34:34.741966Z	info	detect	errorcount/err_count.go:178	closeToOpen errorCount: instance(id=af2ba5fb8cfee5986adf82d7b70f83a8a202da4d, address=9.136.102.110:8081) match condition for failCount=1(threshold=1)
+2026-08-05 10:34:34.742091Z	warn	detect	circuitbreaker/circuitbreaker.go:79	errorCount circuitbreaker: close to open, instance: Id: af2ba5fb8cfee5986adf82d7b70f83a8a202da4d, Namespace: Polaris, Service: polaris.monitor, Host: 9.136.102.110, Port: 8081
+2026-08-05 10:34:35.741140Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Test", service: "lzb_filter_only_router"}
+2026-08-05 10:37:14.336310Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Polaris", service: "polaris.discover"}
+2026-08-05 10:37:19.336564Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Test", service: "lzb_filter_only_router"}
+2026-08-05 10:37:43.467446Z	info	detect	cbcheck/ticker.go:97	instances not initialized for {namespace: "Test", service: "lzb_filter_only_router"}

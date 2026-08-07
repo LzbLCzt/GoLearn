@@ -37,6 +37,7 @@ consumer:
 
 // instanceStat 记录被调实例的 CMDB 信息与命中次数
 type instanceStat struct {
+	id     string
 	host   string
 	port   uint32
 	region string
@@ -87,6 +88,7 @@ func TestNearbyRouter_AllHealthy_CallerInShenzhen(t *testing.T) {
 		s, ok := stats[key]
 		if !ok {
 			s = &instanceStat{
+				id:     ins.GetId(),
 				host:   ins.GetHost(),
 				port:   ins.GetPort(),
 				region: ins.GetRegion(),
@@ -116,8 +118,8 @@ func printStats(t *testing.T, stats map[string]*instanceStat) {
 	t.Logf("  %-16s  %-8s  %-8s  %-12s  %s", "HOST:PORT", "REGION", "ZONE", "CAMPUS", "COUNT")
 	for _, k := range keys {
 		s := stats[k]
-		t.Logf("  %-16s  %-8s  %-8s  %-12s  %4d",
-			fmt.Sprintf("%s:%d", s.host, s.port), s.region, s.zone, s.campus, s.count)
+		t.Logf("id:%s  %-16s  %-8s  %-8s  %-12s  %4d",
+			fmt.Sprintf("%s:%d", s.host, s.port), s.id, s.region, s.zone, s.campus, s.count)
 		total += s.count
 	}
 	t.Logf("命中实例总数: %d, 请求总数: %d", len(keys), total)
