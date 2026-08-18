@@ -35,7 +35,7 @@ func RegisterInstance(t *testing.T, host string) error {
 	req.Service = "polaris.report.maglev"
 	req.Host = host
 	req.Port = 8089
-	protocol := "grpc"
+	protocol := "http"
 	req.Protocol = &protocol
 	weight := 100
 	req.Weight = &weight

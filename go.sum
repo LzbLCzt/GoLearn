@@ -15,8 +15,8 @@ git.code.oa.com/trpc-go/trpc-go v0.8.1 h1:E2dZus9Swh2xG2cRs4EeB4NCuTfz0nV5RN4jc8
 git.code.oa.com/trpc-go/trpc-go v0.8.1/go.mod h1:E6n16deEnLXcQAA81fUL8GlTj/QnH0Bq99kxDfuxcg8=
 git.woa.com/jce/jce v1.2.0 h1:o75OgZYPg2+AWtF3m7YkC6lISOKtMmuj3H2UzD6e8Rg=
 git.woa.com/jce/jce v1.2.0/go.mod h1:tDEP7kGD+54CmvikQ3n5CS3YYwzSkiqKgXdOhFKpvq0=
-git.woa.com/polaris/polaris-server-api v1.0.27 h1:JhQ/RQY/RxRK/9U39v0PDQxmiCxFlMjk+YSuKmrSMCU=
-git.woa.com/polaris/polaris-server-api v1.0.27/go.mod h1:xKQWKjY8ODlBvhYhcqqdCUlEBfzAyoRu1mR1RGqY//I=
+git.woa.com/polaris/polaris-server-api v1.0.30 h1:y+JvsOwNuImfveQGF3dwAwzE4fLfM5OT/qIzmT8yQwo=
+git.woa.com/polaris/polaris-server-api v1.0.30/go.mod h1:xKQWKjY8ODlBvhYhcqqdCUlEBfzAyoRu1mR1RGqY//I=
 git.woa.com/polaris/polaris-server-api/api/metric v1.0.0 h1:vVVJskoYVhDxSZULsMdsK0znW8wTviq0G2XzWheDXVA=
 git.woa.com/polaris/polaris-server-api/api/metric v1.0.0/go.mod h1:RdH4JxA8LmqO7HatVx9RRU7pOAVQK5fhkoxetqdTWG4=
 git.woa.com/polaris/polaris-server-api/api/monitor v1.0.7/go.mod h1:WMk+g+VfDOPAgW7pkWnEQ8g28iPQLxdByQvc82MhEYE=

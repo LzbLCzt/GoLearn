@@ -10,7 +10,7 @@ global:
   serverConnector:
     addresses:
       - 9.141.64.64:8081
-    protocol: grpc
+    protocol: http
     # 服务的定时同步周期
     #syncInterval: 1s
     # 服务的定时同步周期

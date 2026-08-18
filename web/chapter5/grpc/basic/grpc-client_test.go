@@ -10,8 +10,8 @@ import (
 )
 
 func TestGrpcClient(t *testing.T) {
-	//conn, err := grpc.Dial(":8088", grpc.WithInsecure())
-	conn, err := grpc.Dial("9.134.117.127:8088", grpc.WithInsecure())	//远程调用个人开发机上部署的服务
+	//conn, err := http.Dial(":8088", http.WithInsecure())
+	conn, err := grpc.Dial("9.134.117.127:8088", grpc.WithInsecure()) //远程调用个人开发机上部署的服务
 	if err != nil {
 		log.Fatalf("dial error: %v\n", err)
 	}

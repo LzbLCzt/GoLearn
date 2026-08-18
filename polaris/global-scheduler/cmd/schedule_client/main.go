@@ -54,6 +54,7 @@ func main() {
 		Namespace:   namespace,
 		Service:     service,
 		Loadbalance: schedule.LoadBalanceType_GLOBAL_P2C,
+		//Loadbalance: schedule.LoadBalanceType_GLOBAL_WRR,
 		Criteria: &schedule.LoadBalanceCriteria{
 			ReplicaCount: 1,
 		},
@@ -81,8 +82,8 @@ func main() {
 	if nodes := resp.GetNodes(); len(nodes) > 0 {
 		fmt.Printf("Nodes (%d):\n", len(nodes))
 		for i, node := range nodes {
-			fmt.Printf("  [%d] Host=%s, Port=%d, Reused=%v\n",
-				i, node.GetHost(), node.GetPort(), node.GetReused())
+			fmt.Printf("  [%d] Host=%s, Port=%d, Id=%s, Reused=%v\n",
+				i, node.GetHost(), node.GetPort(), node.GetId(), node.GetReused())
 		}
 	} else {
 		fmt.Println("Nodes: (空)")

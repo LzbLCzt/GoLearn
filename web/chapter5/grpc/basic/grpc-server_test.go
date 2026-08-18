@@ -20,7 +20,7 @@ func TestGrpcServer(t *testing.T) {
 	pb.RegisterProgrammerServiceServer(s, &ProgrammerServiceServer{})
 	err = s.Serve(listen)
 	if err != nil {
-		log.Fatalf("grpc service serve error: %v\n", err)
+		log.Fatalf("http service serve error: %v\n", err)
 	}
 }
 

@@ -50,7 +50,7 @@ func GetInstances() []*apiV1Model.Instance {
 		Namespace: &wrappers.StringValue{Value: "Test"},
 		Host:      &wrappers.StringValue{Value: "127.0.0.3"},
 		Port:      &wrappers.UInt32Value{Value: 8080},
-		Protocol:  &wrappers.StringValue{Value: "grpc"},
+		Protocol:  &wrappers.StringValue{Value: "http"},
 		Metadata: map[string]string{
 			"key1": "value1",
 			"key2": "value2",
