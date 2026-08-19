@@ -157,7 +157,7 @@ func printStats(stopCh chan struct{}, sentCount, errCount,
 			if changed > 0 {
 				marker = " ← CHANGED!"
 			}
-			fmt.Printf("[%v] target=%d sent=%d err=%d "+
+			fmt.Printf("[%v] target=%d succeed sent=%d err=%d "+
 				"rateLimit=%d fanout=%d%s\n",
 				elapsed, tgt, sent, errs, rl, fc, marker)
 		}

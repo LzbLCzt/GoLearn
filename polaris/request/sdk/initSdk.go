@@ -3,8 +3,8 @@ package sdk
 import (
 	"strings"
 
-	"git.code.oa.com/polaris/polaris-go/api"
 	"git.code.oa.com/trpc-go/trpc-go/log"
+	"git.woa.com/polaris/polaris-go/v2/api"
 )
 
 var Consumer api.ConsumerAPI

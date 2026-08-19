@@ -2,9 +2,9 @@
 # 一键跑 block profile 分析
 #
 # 用法：
-#   bash run.sh              # 默认：启动服务 -> 采集 15s block profile -> 打开 Web UI
-#   bash run.sh top          # 采集完直接命令行打印 top（不弹浏览器）
-#   bash run.sh clean        # 清理生成物
+#   bash execute.sh              # 默认：启动服务 -> 采集 15s block profile -> 打开 Web UI
+#   bash execute.sh top          # 采集完直接命令行打印 top（不弹浏览器）
+#   bash execute.sh clean        # 清理生成物
 #
 # 依赖：go、curl；如果想看调用图，最好装一下 graphviz（brew install graphviz）
 
@@ -61,7 +61,7 @@ case "$action" in
     demo_pid="$(cat "$PID_FILE")"
 
     # 确保退出时清掉后台进程
-    trap 'echo "[run.sh] cleaning up..."; kill '"$demo_pid"' 2>/dev/null || true; rm -f '"$PID_FILE"'' EXIT
+    trap 'echo "[execute.sh] cleaning up..."; kill '"$demo_pid"' 2>/dev/null || true; rm -f '"$PID_FILE"'' EXIT
 
     # 等 pprof endpoint ready
     echo "[run.sh] waiting for pprof endpoint ..."
@@ -81,7 +81,7 @@ case "$action" in
     ls -lh "$PROFILE_FILE"
 
     if [[ "$action" == "top" ]]; then
-#      echo "[run.sh] pprof top (block):"
+#      echo "[execute.sh] pprof top (block):"
 #      go tool pprof -top -nodecount=15 "$BIN" "$PROFILE_FILE"
 
       echo

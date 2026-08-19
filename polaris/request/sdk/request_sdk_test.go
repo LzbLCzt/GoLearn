@@ -4,10 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"git.code.oa.com/polaris/polaris-go/api"
-	"git.code.oa.com/polaris/polaris-go/pkg/config"
-	"git.code.oa.com/polaris/polaris-go/pkg/model"
 	"git.code.oa.com/trpc-go/trpc-go/log"
+	"git.woa.com/polaris/polaris-go/v2/api"
+	"git.woa.com/polaris/polaris-go/v2/pkg/model"
 
 	"GoLearn/polaris/util"
 )
@@ -64,8 +63,8 @@ func TestSdkRequest_GetOneInstanceV2(t *testing.T) {
 	req := api.GetOneInstanceRequest{}
 	req.Service = "lzb_test"
 	req.Namespace = "Test"
-	req.LbPolicy = config.DefaultLoadBalancerMaglev
-	req.HashKey = []byte("aaa")
+	//req.LbPolicy = config.DefaultLoadBalancerMaglev
+	//req.HashKey = []byte("aaa")
 	rsp, err := Consumer.GetOneInstance(&req)
 	//rsp, err := Consumer.GetInstances(&req)
 	if err != nil {

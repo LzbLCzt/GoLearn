@@ -6,3 +6,8 @@ polaris/discover.proxy/polaris/log/*
 polaris/request/sdk/polaris/log/*
 polaris/request/sdk/polaris/log/network/*
 polaris/request/sdk/polaris/log/network/*
+
+
+# 忽略所有目录下的 .log 文件
+**/*.log
+

@@ -8,10 +8,10 @@ fi
 # 一键跑 goroutine 泄漏分析
 #
 # 用法：
-#   bash run.sh              # 默认：启动服务 -> 累计 15s -> 打开 Web UI (goroutine profile)
-#   bash run.sh top          # 采集完直接命令行打印 top / traces / list（不弹浏览器）
-#   bash run.sh diff         # 采两次 profile 做增量对比，最能证明"在泄漏"
-#   bash run.sh clean        # 清理生成物
+#   bash execute.sh              # 默认：启动服务 -> 累计 15s -> 打开 Web UI (goroutine profile)
+#   bash execute.sh top          # 采集完直接命令行打印 top / traces / list（不弹浏览器）
+#   bash execute.sh diff         # 采两次 profile 做增量对比，最能证明"在泄漏"
+#   bash execute.sh clean        # 清理生成物
 #
 # 依赖：go、curl；看调用图建议装 graphviz（brew install graphviz）
 #
@@ -66,7 +66,7 @@ start_demo() {
   echo $! > "$PID_FILE"
   demo_pid="$(cat "$PID_FILE")"
 
-  trap 'echo "[run.sh] cleaning up..."; kill '"$demo_pid"' 2>/dev/null || true; rm -f '"$PID_FILE"'' EXIT
+  trap 'echo "[execute.sh] cleaning up..."; kill '"$demo_pid"' 2>/dev/null || true; rm -f '"$PID_FILE"'' EXIT
 
   echo "[run.sh] waiting for pprof endpoint ..."
   for i in {1..20}; do

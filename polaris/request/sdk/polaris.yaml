@@ -9,8 +9,11 @@ global:
     timeout: 10000ms
   serverConnector:
     addresses:
-      - 9.141.64.64:8081
-    protocol: http
+#      - 9.141.64.64:8081 // 开发环境
+      #新加坡独立集群
+      - 9.208.48.208:8081
+#    joinPoint: singapore
+    protocol: grpc
     # 服务的定时同步周期
     #syncInterval: 1s
     # 服务的定时同步周期

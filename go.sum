@@ -15,6 +15,8 @@ git.code.oa.com/trpc-go/trpc-go v0.8.1 h1:E2dZus9Swh2xG2cRs4EeB4NCuTfz0nV5RN4jc8
 git.code.oa.com/trpc-go/trpc-go v0.8.1/go.mod h1:E6n16deEnLXcQAA81fUL8GlTj/QnH0Bq99kxDfuxcg8=
 git.woa.com/jce/jce v1.2.0 h1:o75OgZYPg2+AWtF3m7YkC6lISOKtMmuj3H2UzD6e8Rg=
 git.woa.com/jce/jce v1.2.0/go.mod h1:tDEP7kGD+54CmvikQ3n5CS3YYwzSkiqKgXdOhFKpvq0=
+git.woa.com/polaris/polaris-go/v2 v2.7.0 h1:rqo+wY6/WQ27CVrf2Rv+AUVtx45yzmAehMlcBaKLOFk=
+git.woa.com/polaris/polaris-go/v2 v2.7.0/go.mod h1:z8MPew+MvN8+4dEfmukttFtpahfTMIyQxYJDJC2ZFI8=
 git.woa.com/polaris/polaris-server-api v1.0.30 h1:y+JvsOwNuImfveQGF3dwAwzE4fLfM5OT/qIzmT8yQwo=
 git.woa.com/polaris/polaris-server-api v1.0.30/go.mod h1:xKQWKjY8ODlBvhYhcqqdCUlEBfzAyoRu1mR1RGqY//I=
 git.woa.com/polaris/polaris-server-api/api/metric v1.0.0 h1:vVVJskoYVhDxSZULsMdsK0znW8wTviq0G2XzWheDXVA=
@@ -27,6 +29,7 @@ git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.2/go.mod h1:5IghhwSPqztu
 git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.3-0.20230209033019-2c5536d01209 h1:XaCm++m21p7z9jnEgmsmu0oHyQYTqejmKv2dQ47K0L0=
 git.woa.com/polaris/polaris-server-api/api/v1/grpc v1.0.3-0.20230209033019-2c5536d01209/go.mod h1:5IghhwSPqztuwn6jH4UVSu6kM16ZUUcCQVYZmdrVM4M=
 git.woa.com/polaris/polaris-server-api/api/v1/model v1.1.3/go.mod h1:hmwu/iGAayA1f3q6HdKyKRMshHR+oPDwpeIIvRBU01Y=
+git.woa.com/polaris/polaris-server-api/api/v1/model v1.2.7/go.mod h1:hmwu/iGAayA1f3q6HdKyKRMshHR+oPDwpeIIvRBU01Y=
 git.woa.com/polaris/polaris-server-api/api/v1/model v1.3.1 h1:l1ynCNTFaKtW5MTwq4FAhEvBq5wp5AuS2nOA4B1Ps7k=
 git.woa.com/polaris/polaris-server-api/api/v1/model v1.3.1/go.mod h1:hmwu/iGAayA1f3q6HdKyKRMshHR+oPDwpeIIvRBU01Y=
 git.woa.com/polaris/polaris-server-api/api/v1/trpc v1.0.1 h1:l5XejSW4AjwregcseQvOwioLHfmajnbrIYCHVRN2Azk=
@@ -34,6 +37,7 @@ git.woa.com/polaris/polaris-server-api/api/v1/trpc v1.0.1/go.mod h1:Ia1MdU/UbEfQ
 git.woa.com/polaris/polaris-server-api/api/v2/grpc v1.0.0 h1:YesQgux0HFiRguWK+JaDVVZb1SR2raUJFOqPmq2770o=
 git.woa.com/polaris/polaris-server-api/api/v2/grpc v1.0.0/go.mod h1:5ZEykuTK5eFNCA+MQ5IvZ+NONFJ5oyK+bLcWRJL5lFQ=
 git.woa.com/polaris/polaris-server-api/api/v2/model v1.0.3/go.mod h1:mhnBknOFFk6C6wyXFcKHd5CtG2ceabT0RvcK2Cu3X8E=
+git.woa.com/polaris/polaris-server-api/api/v2/model v1.0.7/go.mod h1:mhnBknOFFk6C6wyXFcKHd5CtG2ceabT0RvcK2Cu3X8E=
 git.woa.com/polaris/polaris-server-api/api/v2/model v1.1.0 h1:rS6Jux/0EcqeYZhnRtIzoCdN5SURuTDs1WrtCSNcpsk=
 git.woa.com/polaris/polaris-server-api/api/v2/model v1.1.0/go.mod h1:mhnBknOFFk6C6wyXFcKHd5CtG2ceabT0RvcK2Cu3X8E=
 git.woa.com/trpc-go/go_reuseport v1.7.0 h1:h9Z8/fFvOSk+ezrLRyJ8Ck4tka74ZRCxgKI+4zYlT44=
