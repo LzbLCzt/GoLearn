@@ -4,6 +4,10 @@ global:
       service: polaris.discover # discover-proxy服务
       #可选：服务刷新间隔
       refreshInterval: 1s
+    monitorCluster:
+      namespace: Polaris
+      service: polaris.monitor
+      refreshInterval: 10m
   api:
     # 默认api超时时间
     timeout: 10000ms
