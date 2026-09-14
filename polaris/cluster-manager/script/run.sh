@@ -1,0 +1,1 @@
+go run . -sql ./update_service_route_rule_full.sql -dry-run=true

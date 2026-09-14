@@ -7,4 +7,4 @@ cd "${SCRIPT_DIR}"
 go run . \
   -addr=9.134.117.127:8092 \
   -namespace=Test \
-  -service=lzb_test2
+  -service=lzb_llm_test
