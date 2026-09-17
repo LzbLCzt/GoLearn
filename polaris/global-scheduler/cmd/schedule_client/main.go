@@ -20,8 +20,8 @@ func main() {
 		dialTimeout time.Duration
 		callTimeout time.Duration
 	)
-	//flag.StringVar(&serverAddr, "addr", "9.134.117.127:8085", "global-scheduler gRPC 服务地址")
-	flag.StringVar(&serverAddr, "addr", "9.141.112.151:8082", "global-scheduler gRPC 服务地址")
+	flag.StringVar(&serverAddr, "addr", "9.134.117.127:8085", "global-scheduler gRPC 服务地址")
+	//flag.StringVar(&serverAddr, "addr", "9.141.112.151:8082", "global-scheduler gRPC 服务地址")
 	//flag.StringVar(&serverAddr, "addr", "11.181.43.232:8081", "global-scheduler gRPC 服务地址")
 	flag.StringVar(&namespace, "namespace", "", "北极星命名空间（必填）")
 	flag.StringVar(&service, "service", "", "北极星服务名（必填）")
@@ -57,7 +57,9 @@ func main() {
 		Loadbalance: schedule.LoadBalanceType_GLOBAL_P2C,
 		//Loadbalance: schedule.LoadBalanceType_GLOBAL_WRR,
 		Criteria: &schedule.LoadBalanceCriteria{
-			ReplicaCount: 1,
+			//ReplicaCount: 1,
+			SessionId:  "1234567890",
+			SessionTtl: 60,
 		},
 	}
 
